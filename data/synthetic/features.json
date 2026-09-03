@@ -1,0 +1,51 @@
+[
+  {
+    "feature_id": "feat_avg_incurred_12m",
+    "name": "avg_incurred_12m",
+    "definition": "Average incurred amount over trailing 12 months",
+    "source_tables": [
+      "ANALYTICS.CORE.fct_claims"
+    ],
+    "transformation": "avg(incurred_amount) over 12m window",
+    "availability_timestamp_column": "as_of_ts",
+    "owner": "ml-platform",
+    "version": 1,
+    "leakage_risk": "low",
+    "performance_contribution": 0.12,
+    "model_usage": [
+      "claims_severity_v3"
+    ]
+  },
+  {
+    "feature_id": "feat_days_to_report",
+    "name": "days_to_report",
+    "definition": "report_date - loss_date",
+    "source_tables": [
+      "ANALYTICS.CORE.fct_claims"
+    ],
+    "transformation": "datediff(day, loss_date, report_date)",
+    "availability_timestamp_column": "report_date",
+    "owner": "ml-platform",
+    "version": 1,
+    "leakage_risk": "medium",
+    "performance_contribution": 0.08,
+    "model_usage": [
+      "claims_severity_v3"
+    ]
+  },
+  {
+    "feature_id": "feat_ultimate_loss_ratio",
+    "name": "ultimate_loss_ratio",
+    "definition": "Closed claim ultimate / premium \u2014 POST OUTCOME",
+    "source_tables": [
+      "ANALYTICS.CORE.fct_claims"
+    ],
+    "transformation": "ultimate / premium",
+    "availability_timestamp_column": "close_date",
+    "owner": "actuarial",
+    "version": 1,
+    "leakage_risk": "high",
+    "performance_contribution": 0.35,
+    "model_usage": []
+  }
+]

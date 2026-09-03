@@ -1,0 +1,802 @@
+[
+  {
+    "scenario_id": "scn-upstream_failure-000",
+    "agent": "pipeline_sre",
+    "title": "Upstream extract_claims task failed",
+    "description": "Investigate incident INC-0000: Upstream extract_claims task failed",
+    "failure_type": "upstream_failure",
+    "ground_truth_root_cause": "upstream_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0000",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-schema_change-001",
+    "agent": "pipeline_sre",
+    "title": "Schema change broke stg_claims",
+    "description": "Investigate incident INC-0001: Schema change broke stg_claims",
+    "failure_type": "schema_change",
+    "ground_truth_root_cause": "schema_change",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0001",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-missing_partition-002",
+    "agent": "pipeline_sre",
+    "title": "Missing partition for claims load date",
+    "description": "Investigate incident INC-0002: Missing partition for claims load date",
+    "failure_type": "missing_partition",
+    "ground_truth_root_cause": "missing_partition",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0002",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-null_spike-003",
+    "agent": "pipeline_sre",
+    "title": "Null spike in incurred_amount",
+    "description": "Investigate incident INC-0003: Null spike in incurred_amount",
+    "failure_type": "null_spike",
+    "ground_truth_root_cause": "null_spike",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0003",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-duplicate_records-004",
+    "agent": "pipeline_sre",
+    "title": "Duplicate claim_id in fct_claims",
+    "description": "Investigate incident INC-0004: Duplicate claim_id in fct_claims",
+    "failure_type": "duplicate_records",
+    "ground_truth_root_cause": "duplicate_records",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0004",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-data_freshness_failure-005",
+    "agent": "pipeline_sre",
+    "title": "Claims table freshness SLA breached",
+    "description": "Investigate incident INC-0005: Claims table freshness SLA breached",
+    "failure_type": "data_freshness_failure",
+    "ground_truth_root_cause": "data_freshness_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0005",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-snowflake_query_timeout-006",
+    "agent": "pipeline_sre",
+    "title": "dbt_run_core Snowflake timeout",
+    "description": "Investigate incident INC-0006: dbt_run_core Snowflake timeout",
+    "failure_type": "snowflake_query_timeout",
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0006",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-warehouse_overload-007",
+    "agent": "pipeline_sre",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "description": "Investigate incident INC-0007: TRANSFORM_WH overload delaying pipeline",
+    "failure_type": "warehouse_overload",
+    "ground_truth_root_cause": "warehouse_overload",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0007",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-invalid_sql-008",
+    "agent": "pipeline_sre",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "description": "Investigate incident INC-0008: Invalid SQL in feat_policy_risk model",
+    "failure_type": "invalid_sql",
+    "ground_truth_root_cause": "invalid_sql",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0008",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-downstream_dependency_failure-009",
+    "agent": "pipeline_sre",
+    "title": "score_claims_model failed due to upstream",
+    "description": "Investigate incident INC-0009: score_claims_model failed due to upstream",
+    "failure_type": "downstream_dependency_failure",
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0009",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-upstream_failure-010",
+    "agent": "pipeline_sre",
+    "title": "Upstream extract_claims task failed",
+    "description": "Investigate incident INC-0010: Upstream extract_claims task failed",
+    "failure_type": "upstream_failure",
+    "ground_truth_root_cause": "upstream_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0010",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-schema_change-011",
+    "agent": "pipeline_sre",
+    "title": "Schema change broke stg_claims",
+    "description": "Investigate incident INC-0011: Schema change broke stg_claims",
+    "failure_type": "schema_change",
+    "ground_truth_root_cause": "schema_change",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0011",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-missing_partition-012",
+    "agent": "pipeline_sre",
+    "title": "Missing partition for claims load date",
+    "description": "Investigate incident INC-0012: Missing partition for claims load date",
+    "failure_type": "missing_partition",
+    "ground_truth_root_cause": "missing_partition",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0012",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-null_spike-013",
+    "agent": "pipeline_sre",
+    "title": "Null spike in incurred_amount",
+    "description": "Investigate incident INC-0013: Null spike in incurred_amount",
+    "failure_type": "null_spike",
+    "ground_truth_root_cause": "null_spike",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0013",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-duplicate_records-014",
+    "agent": "pipeline_sre",
+    "title": "Duplicate claim_id in fct_claims",
+    "description": "Investigate incident INC-0014: Duplicate claim_id in fct_claims",
+    "failure_type": "duplicate_records",
+    "ground_truth_root_cause": "duplicate_records",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0014",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-data_freshness_failure-015",
+    "agent": "pipeline_sre",
+    "title": "Claims table freshness SLA breached",
+    "description": "Investigate incident INC-0015: Claims table freshness SLA breached",
+    "failure_type": "data_freshness_failure",
+    "ground_truth_root_cause": "data_freshness_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0015",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-snowflake_query_timeout-016",
+    "agent": "pipeline_sre",
+    "title": "dbt_run_core Snowflake timeout",
+    "description": "Investigate incident INC-0016: dbt_run_core Snowflake timeout",
+    "failure_type": "snowflake_query_timeout",
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0016",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-warehouse_overload-017",
+    "agent": "pipeline_sre",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "description": "Investigate incident INC-0017: TRANSFORM_WH overload delaying pipeline",
+    "failure_type": "warehouse_overload",
+    "ground_truth_root_cause": "warehouse_overload",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0017",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-invalid_sql-018",
+    "agent": "pipeline_sre",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "description": "Investigate incident INC-0018: Invalid SQL in feat_policy_risk model",
+    "failure_type": "invalid_sql",
+    "ground_truth_root_cause": "invalid_sql",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0018",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-downstream_dependency_failure-019",
+    "agent": "pipeline_sre",
+    "title": "score_claims_model failed due to upstream",
+    "description": "Investigate incident INC-0019: score_claims_model failed due to upstream",
+    "failure_type": "downstream_dependency_failure",
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0019",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-upstream_failure-020",
+    "agent": "pipeline_sre",
+    "title": "Upstream extract_claims task failed",
+    "description": "Investigate incident INC-0020: Upstream extract_claims task failed",
+    "failure_type": "upstream_failure",
+    "ground_truth_root_cause": "upstream_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0020",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-schema_change-021",
+    "agent": "pipeline_sre",
+    "title": "Schema change broke stg_claims",
+    "description": "Investigate incident INC-0021: Schema change broke stg_claims",
+    "failure_type": "schema_change",
+    "ground_truth_root_cause": "schema_change",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0021",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-missing_partition-022",
+    "agent": "pipeline_sre",
+    "title": "Missing partition for claims load date",
+    "description": "Investigate incident INC-0022: Missing partition for claims load date",
+    "failure_type": "missing_partition",
+    "ground_truth_root_cause": "missing_partition",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0022",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-null_spike-023",
+    "agent": "pipeline_sre",
+    "title": "Null spike in incurred_amount",
+    "description": "Investigate incident INC-0023: Null spike in incurred_amount",
+    "failure_type": "null_spike",
+    "ground_truth_root_cause": "null_spike",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0023",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-duplicate_records-024",
+    "agent": "pipeline_sre",
+    "title": "Duplicate claim_id in fct_claims",
+    "description": "Investigate incident INC-0024: Duplicate claim_id in fct_claims",
+    "failure_type": "duplicate_records",
+    "ground_truth_root_cause": "duplicate_records",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0024",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-data_freshness_failure-025",
+    "agent": "pipeline_sre",
+    "title": "Claims table freshness SLA breached",
+    "description": "Investigate incident INC-0025: Claims table freshness SLA breached",
+    "failure_type": "data_freshness_failure",
+    "ground_truth_root_cause": "data_freshness_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0025",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-snowflake_query_timeout-026",
+    "agent": "pipeline_sre",
+    "title": "dbt_run_core Snowflake timeout",
+    "description": "Investigate incident INC-0026: dbt_run_core Snowflake timeout",
+    "failure_type": "snowflake_query_timeout",
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0026",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-warehouse_overload-027",
+    "agent": "pipeline_sre",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "description": "Investigate incident INC-0027: TRANSFORM_WH overload delaying pipeline",
+    "failure_type": "warehouse_overload",
+    "ground_truth_root_cause": "warehouse_overload",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0027",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-invalid_sql-028",
+    "agent": "pipeline_sre",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "description": "Investigate incident INC-0028: Invalid SQL in feat_policy_risk model",
+    "failure_type": "invalid_sql",
+    "ground_truth_root_cause": "invalid_sql",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0028",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-downstream_dependency_failure-029",
+    "agent": "pipeline_sre",
+    "title": "score_claims_model failed due to upstream",
+    "description": "Investigate incident INC-0029: score_claims_model failed due to upstream",
+    "failure_type": "downstream_dependency_failure",
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0029",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-upstream_failure-030",
+    "agent": "pipeline_sre",
+    "title": "Upstream extract_claims task failed",
+    "description": "Investigate incident INC-0030: Upstream extract_claims task failed",
+    "failure_type": "upstream_failure",
+    "ground_truth_root_cause": "upstream_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0030",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-schema_change-031",
+    "agent": "pipeline_sre",
+    "title": "Schema change broke stg_claims",
+    "description": "Investigate incident INC-0031: Schema change broke stg_claims",
+    "failure_type": "schema_change",
+    "ground_truth_root_cause": "schema_change",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0031",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-missing_partition-032",
+    "agent": "pipeline_sre",
+    "title": "Missing partition for claims load date",
+    "description": "Investigate incident INC-0032: Missing partition for claims load date",
+    "failure_type": "missing_partition",
+    "ground_truth_root_cause": "missing_partition",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0032",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-null_spike-033",
+    "agent": "pipeline_sre",
+    "title": "Null spike in incurred_amount",
+    "description": "Investigate incident INC-0033: Null spike in incurred_amount",
+    "failure_type": "null_spike",
+    "ground_truth_root_cause": "null_spike",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0033",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-duplicate_records-034",
+    "agent": "pipeline_sre",
+    "title": "Duplicate claim_id in fct_claims",
+    "description": "Investigate incident INC-0034: Duplicate claim_id in fct_claims",
+    "failure_type": "duplicate_records",
+    "ground_truth_root_cause": "duplicate_records",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0034",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-data_freshness_failure-035",
+    "agent": "pipeline_sre",
+    "title": "Claims table freshness SLA breached",
+    "description": "Investigate incident INC-0035: Claims table freshness SLA breached",
+    "failure_type": "data_freshness_failure",
+    "ground_truth_root_cause": "data_freshness_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0035",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-snowflake_query_timeout-036",
+    "agent": "pipeline_sre",
+    "title": "dbt_run_core Snowflake timeout",
+    "description": "Investigate incident INC-0036: dbt_run_core Snowflake timeout",
+    "failure_type": "snowflake_query_timeout",
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0036",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-warehouse_overload-037",
+    "agent": "pipeline_sre",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "description": "Investigate incident INC-0037: TRANSFORM_WH overload delaying pipeline",
+    "failure_type": "warehouse_overload",
+    "ground_truth_root_cause": "warehouse_overload",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0037",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-invalid_sql-038",
+    "agent": "pipeline_sre",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "description": "Investigate incident INC-0038: Invalid SQL in feat_policy_risk model",
+    "failure_type": "invalid_sql",
+    "ground_truth_root_cause": "invalid_sql",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0038",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "scn-downstream_dependency_failure-039",
+    "agent": "pipeline_sre",
+    "title": "score_claims_model failed due to upstream",
+    "description": "Investigate incident INC-0039: score_claims_model failed due to upstream",
+    "failure_type": "downstream_dependency_failure",
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "expected_tools": [
+      "get_airflow_dag_status",
+      "get_task_logs",
+      "get_dbt_run",
+      "get_dbt_tests",
+      "get_table_metadata"
+    ],
+    "context": {
+      "incident_id": "INC-0039",
+      "dag_id": "insurance_daily_pipeline"
+    },
+    "difficulty": "medium"
+  }
+]

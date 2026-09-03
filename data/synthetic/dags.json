@@ -1,0 +1,195 @@
+[
+  {
+    "dag_id": "insurance_daily_pipeline",
+    "description": "Daily insurance claims/policy analytics + ML scoring",
+    "schedule": "0 6 * * *",
+    "is_paused": false,
+    "owners": [
+      "data-platform"
+    ],
+    "tags": [
+      "insurance",
+      "critical"
+    ],
+    "tasks": [
+      {
+        "task_id": "extract_claims",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "PythonOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 43.72954265470942,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [],
+        "downstream": [
+          "load_raw_claims"
+        ],
+        "log_excerpt": "[ERROR] Connection refused to claims source SFTP\nTraceback: SourceExtractError\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "extract_policies",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "PythonOperator",
+        "status": "success",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 260.86973224272685,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [],
+        "downstream": [
+          "load_raw_policies"
+        ],
+        "log_excerpt": "[2026-08-10T22:25:15.038804+00:00] Task extract_policies completed successfully\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "load_raw_claims",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 140.27993303011885,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "extract_claims"
+        ],
+        "downstream": [
+          "dbt_run_staging"
+        ],
+        "log_excerpt": "[ERROR] Partition not found: s3://claims-landing/dt=2026-08-09/\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "load_raw_policies",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "success",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 396.23568451176885,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "extract_policies"
+        ],
+        "downstream": [
+          "dbt_run_staging"
+        ],
+        "log_excerpt": "[2026-08-10T22:25:15.038804+00:00] Task load_raw_policies completed successfully\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "dbt_run_staging",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 128.87489690429555,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "load_raw_claims",
+          "load_raw_policies"
+        ],
+        "downstream": [
+          "dbt_run_core"
+        ],
+        "log_excerpt": "[ERROR] Database Error in model stg_claims\ncolumn claim_status unexpected value REOPENED\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "dbt_run_core",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 85.29549318800852,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "dbt_run_staging"
+        ],
+        "downstream": [
+          "dbt_test_core"
+        ],
+        "log_excerpt": "[WARN] warehouse TRANSFORM_WH queued_overload_time=900s\n[ERROR] query delayed then cancelled\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "dbt_test_core",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 419.9994364147992,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "dbt_run_core"
+        ],
+        "downstream": [
+          "feature_build"
+        ],
+        "log_excerpt": "[ERROR] freshness check failed for RAW.CLAIM.claims SLA=2h actual=48h\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "feature_build",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "BashOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 344.9739072212355,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "dbt_test_core"
+        ],
+        "downstream": [
+          "score_claims_model"
+        ],
+        "log_excerpt": "[ERROR] upstream dbt_test_core failed\n",
+        "pool": "default_pool",
+        "queue": "default"
+      },
+      {
+        "task_id": "score_claims_model",
+        "dag_id": "insurance_daily_pipeline",
+        "operator": "PythonOperator",
+        "status": "failed",
+        "start_date": "2026-08-10T19:25:15.038804Z",
+        "end_date": "2026-08-10T20:25:15.038804Z",
+        "duration_seconds": 546.4894355451836,
+        "try_number": 1,
+        "max_tries": 3,
+        "upstream": [
+          "feature_build"
+        ],
+        "downstream": [],
+        "log_excerpt": "[ERROR] Feature table missing; cannot score\n",
+        "pool": "default_pool",
+        "queue": "default"
+      }
+    ],
+    "last_run_status": "failed",
+    "last_run_at": "2026-08-10T20:25:15.038804Z",
+    "next_run_at": "2026-08-11T02:25:15.038804Z"
+  }
+]

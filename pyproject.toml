@@ -1,0 +1,121 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomous-data-ml-engineering"
+version = "0.1.0"
+description = "AI-powered autonomous data & ML engineering agent lab for insurance platforms"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.8.0",
+  "pydantic-settings>=2.4.0",
+  "httpx>=0.27.0",
+  "sqlalchemy>=2.0.32",
+  "aiosqlite>=0.20.0",
+  "networkx>=3.3",
+  "numpy>=2.0.0",
+  "pandas>=2.2.0",
+  "scipy>=1.13.0",
+  "scikit-learn>=1.5.0",
+  "jinja2>=3.1.4",
+  "pyyaml>=6.0.2",
+  "python-dateutil>=2.9.0",
+  "rich>=13.7.0",
+  "typer>=0.12.0",
+  "structlog>=24.4.0",
+  "orjson>=3.10.0",
+  "tenacity>=9.0.0",
+  "openai>=1.40.0",
+  "langgraph>=0.2.0",
+  "langchain-core>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.24.0",
+  "pytest-cov>=5.0.0",
+  "ruff>=0.6.0",
+  "mypy>=1.11.0",
+  "httpx>=0.27.0",
+  "respx>=0.21.0",
+]
+
+[project.scripts]
+adme = "adme_platform.api.cli:app"
+
+[tool.setuptools.packages.find]
+where = [
+  "shared/agent-sdk/src",
+  "shared/tool-sdk/src",
+  "shared/evaluation/src",
+  "shared/observability/src",
+  "shared/domain/src",
+  "shared/data-generation/src",
+  "shared/graph/src",
+  "shared/retrieval/src",
+  ".",
+]
+include = [
+  "domain*",
+  "agent_sdk*",
+  "tool_sdk*",
+  "evaluation*",
+  "observability*",
+  "data_generation*",
+  "graph*",
+  "retrieval*",
+  "adme_platform*",
+  "pipeline_sre*",
+  "dbt_review*",
+  "snowflake_optimizer*",
+  "data_quality_agent*",
+  "data_contract_agent*",
+  "feature_engineering_agent*",
+  "ml_doctor*",
+  "retraining_agent*",
+  "airflow_optimizer*",
+  "lineage_copilot*",
+  "migration_agent*",
+  "engineering_os*",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests", "projects"]
+pythonpath = [
+  "shared/agent-sdk/src",
+  "shared/tool-sdk/src",
+  "shared/evaluation/src",
+  "shared/observability/src",
+  "shared/domain/src",
+  "shared/data-generation/src",
+  "shared/graph/src",
+  "shared/retrieval/src",
+  ".",
+  "projects/pipeline-sre",
+  "projects/dbt-review",
+  "projects/snowflake-optimizer",
+  "projects/data-quality-agent",
+  "projects/data-contract-agent",
+  "projects/feature-engineering-agent",
+  "projects/ml-doctor",
+  "projects/retraining-agent",
+  "projects/airflow-optimizer",
+  "projects/lineage-copilot",
+  "projects/migration-agent",
+  "projects/engineering-os",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+strict = false

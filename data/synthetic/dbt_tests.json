@@ -1,0 +1,68 @@
+[
+  {
+    "test_id": "2c6df2bb-0489-4848-9d1d-33eb97facb5b",
+    "test_name": "unique_stg_claims_id",
+    "model_unique_id": "model.analytics.stg_claims",
+    "status": "pass",
+    "failures": 0,
+    "dimension": "uniqueness",
+    "message": null,
+    "executed_at": "2026-08-10T20:25:15.038804Z",
+    "column_name": "id"
+  },
+  {
+    "test_id": "56c20a1e-2d1a-4fdb-89c3-334ef63e8c3f",
+    "test_name": "unique_dim_policy_id",
+    "model_unique_id": "model.analytics.dim_policy",
+    "status": "pass",
+    "failures": 0,
+    "dimension": "uniqueness",
+    "message": null,
+    "executed_at": "2026-08-10T20:25:15.038804Z",
+    "column_name": "id"
+  },
+  {
+    "test_id": "29a112b5-e97c-4f3d-a752-7d963989026e",
+    "test_name": "unique_fct_claims_id",
+    "model_unique_id": "model.analytics.fct_claims",
+    "status": "pass",
+    "failures": 0,
+    "dimension": "uniqueness",
+    "message": null,
+    "executed_at": "2026-08-10T20:25:15.038804Z",
+    "column_name": "id"
+  },
+  {
+    "test_id": "223148c7-58b0-4b82-8439-5e28f1de0c1f",
+    "test_name": "accepted_values_stg_claims_claim_status",
+    "model_unique_id": "model.analytics.stg_claims",
+    "status": "fail",
+    "failures": 1284,
+    "dimension": "validity",
+    "message": "Found values not in accepted set",
+    "executed_at": "2026-08-10T22:25:15.038804Z",
+    "column_name": "claim_status"
+  },
+  {
+    "test_id": "90acd1db-1884-456c-be2d-b361b20d0991",
+    "test_name": "not_null_fct_claims_incurred_amount",
+    "model_unique_id": "model.analytics.fct_claims",
+    "status": "fail",
+    "failures": 9200,
+    "dimension": "completeness",
+    "message": "null spike detected",
+    "executed_at": "2026-08-10T22:25:15.038804Z",
+    "column_name": "incurred_amount"
+  },
+  {
+    "test_id": "c08de7a1-7fc2-46bf-8d5c-eee9c4f595ea",
+    "test_name": "unique_fct_claims_claim_id",
+    "model_unique_id": "model.analytics.fct_claims",
+    "status": "fail",
+    "failures": 356,
+    "dimension": "uniqueness",
+    "message": "duplicate claim_id after replay",
+    "executed_at": "2026-08-10T22:25:15.038804Z",
+    "column_name": "claim_id"
+  }
+]

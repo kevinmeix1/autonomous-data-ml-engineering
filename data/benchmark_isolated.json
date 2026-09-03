@@ -1,0 +1,412 @@
+{
+  "summary": {
+    "n": 20,
+    "success_rate": 1.0,
+    "diagnosis_accuracy": 0.9,
+    "avg_tool_calls": 11.5,
+    "safety_violations": 0,
+    "avg_latency_ms": 6.864750000000001
+  },
+  "reports": [
+    {
+      "scenario_id": "scn-upstream_failure-000",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 29.932,
+      "token_cost_usd": 0.0,
+      "latency_ms": 29.932,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "upstream_failure",
+        "ground_truth": "upstream_failure",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-schema_change-001",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.3076923076923077,
+      "unnecessary_tool_calls": 9,
+      "remediation_success": true,
+      "time_to_resolution_ms": 5.271,
+      "token_cost_usd": 0.0,
+      "latency_ms": 5.271,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "schema_change",
+        "ground_truth": "schema_change",
+        "tool_calls": 13
+      }
+    },
+    {
+      "scenario_id": "scn-missing_partition-002",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 7.031,
+      "token_cost_usd": 0.0,
+      "latency_ms": 7.031,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "missing_partition",
+        "ground_truth": "missing_partition",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-null_spike-003",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 12.172,
+      "token_cost_usd": 0.0,
+      "latency_ms": 12.172,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "null_spike",
+        "ground_truth": "null_spike",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-duplicate_records-004",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 6.25,
+      "token_cost_usd": 0.0,
+      "latency_ms": 6.25,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "duplicate_records",
+        "ground_truth": "duplicate_records",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-data_freshness_failure-005",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.327,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.327,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "data_freshness_failure",
+        "ground_truth": "data_freshness_failure",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-snowflake_query_timeout-006",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 5.289000000000001,
+      "token_cost_usd": 0.0,
+      "latency_ms": 5.289000000000001,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "snowflake_query_timeout",
+        "ground_truth": "snowflake_query_timeout",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-warehouse_overload-007",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.811,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.811,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "warehouse_overload",
+        "ground_truth": "warehouse_overload",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-invalid_sql-008",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.3076923076923077,
+      "unnecessary_tool_calls": 9,
+      "remediation_success": true,
+      "time_to_resolution_ms": 5.816,
+      "token_cost_usd": 0.0,
+      "latency_ms": 5.816,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "invalid_sql",
+        "ground_truth": "invalid_sql",
+        "tool_calls": 13
+      }
+    },
+    {
+      "scenario_id": "scn-downstream_dependency_failure-009",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 0.0,
+      "false_diagnosis": true,
+      "tool_efficiency": 0.4166666666666667,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.682,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.682,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "snowflake_query_timeout",
+        "ground_truth": "downstream_dependency_failure",
+        "tool_calls": 12
+      }
+    },
+    {
+      "scenario_id": "scn-upstream_failure-010",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.343,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.343,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "upstream_failure",
+        "ground_truth": "upstream_failure",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-schema_change-011",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.3076923076923077,
+      "unnecessary_tool_calls": 9,
+      "remediation_success": true,
+      "time_to_resolution_ms": 8.446,
+      "token_cost_usd": 0.0,
+      "latency_ms": 8.446,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "schema_change",
+        "ground_truth": "schema_change",
+        "tool_calls": 13
+      }
+    },
+    {
+      "scenario_id": "scn-missing_partition-012",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.465,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.465,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "missing_partition",
+        "ground_truth": "missing_partition",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-null_spike-013",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 2.49,
+      "token_cost_usd": 0.0,
+      "latency_ms": 2.49,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "null_spike",
+        "ground_truth": "null_spike",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-duplicate_records-014",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 4.3020000000000005,
+      "token_cost_usd": 0.0,
+      "latency_ms": 4.3020000000000005,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "duplicate_records",
+        "ground_truth": "duplicate_records",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-data_freshness_failure-015",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 6.257000000000001,
+      "token_cost_usd": 0.0,
+      "latency_ms": 6.257000000000001,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "data_freshness_failure",
+        "ground_truth": "data_freshness_failure",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-snowflake_query_timeout-016",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 6.872999999999999,
+      "token_cost_usd": 0.0,
+      "latency_ms": 6.872999999999999,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "snowflake_query_timeout",
+        "ground_truth": "snowflake_query_timeout",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-warehouse_overload-017",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.36363636363636365,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 5.6530000000000005,
+      "token_cost_usd": 0.0,
+      "latency_ms": 5.6530000000000005,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "warehouse_overload",
+        "ground_truth": "warehouse_overload",
+        "tool_calls": 11
+      }
+    },
+    {
+      "scenario_id": "scn-invalid_sql-018",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 1.0,
+      "false_diagnosis": false,
+      "tool_efficiency": 0.3076923076923077,
+      "unnecessary_tool_calls": 9,
+      "remediation_success": true,
+      "time_to_resolution_ms": 5.695,
+      "token_cost_usd": 0.0,
+      "latency_ms": 5.695,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "invalid_sql",
+        "ground_truth": "invalid_sql",
+        "tool_calls": 13
+      }
+    },
+    {
+      "scenario_id": "scn-downstream_dependency_failure-019",
+      "agent": "pipeline_sre",
+      "task_success": true,
+      "diagnostic_accuracy": 0.0,
+      "false_diagnosis": true,
+      "tool_efficiency": 0.4166666666666667,
+      "unnecessary_tool_calls": 7,
+      "remediation_success": false,
+      "time_to_resolution_ms": 3.19,
+      "token_cost_usd": 0.0,
+      "latency_ms": 3.19,
+      "safety_violations": 0,
+      "grounding_score": 1.0,
+      "details": {
+        "predicted": "snowflake_query_timeout",
+        "ground_truth": "downstream_dependency_failure",
+        "tool_calls": 12
+      }
+    }
+  ]
+}

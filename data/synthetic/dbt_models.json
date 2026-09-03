@@ -1,0 +1,152 @@
+[
+  {
+    "unique_id": "model.analytics.stg_claims",
+    "name": "stg_claims",
+    "schema_name": "CORE",
+    "materialization": "view",
+    "path": "models/stg_claims.sql",
+    "depends_on": [
+      "RAW.CLAIM.claims"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": true,
+    "has_docs": false,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 20500076924
+  },
+  {
+    "unique_id": "model.analytics.stg_policies",
+    "name": "stg_policies",
+    "schema_name": "CORE",
+    "materialization": "view",
+    "path": "models/stg_policies.sql",
+    "depends_on": [
+      "RAW.POLICY.policies"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 13019525349
+  },
+  {
+    "unique_id": "model.analytics.dim_policy",
+    "name": "dim_policy",
+    "schema_name": "CORE",
+    "materialization": "table",
+    "path": "models/dim_policy.sql",
+    "depends_on": [
+      "model.analytics.stg_policies"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": true,
+    "has_docs": true,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 44421803022
+  },
+  {
+    "unique_id": "model.analytics.fct_claims",
+    "name": "fct_claims",
+    "schema_name": "CORE",
+    "materialization": "incremental",
+    "path": "models/fct_claims.sql",
+    "depends_on": [
+      "model.analytics.stg_claims",
+      "model.analytics.dim_policy"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": true,
+    "has_docs": true,
+    "is_incremental": true,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 4721365350
+  },
+  {
+    "unique_id": "model.analytics.feat_claim_severity",
+    "name": "feat_claim_severity",
+    "schema_name": "ML",
+    "materialization": "table",
+    "path": "models/feat_claim_severity.sql",
+    "depends_on": [
+      "model.analytics.fct_claims"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 1566090561
+  },
+  {
+    "unique_id": "model.analytics.feat_policy_risk",
+    "name": "feat_policy_risk",
+    "schema_name": "ML",
+    "materialization": "table",
+    "path": "models/feat_policy_risk.sql",
+    "depends_on": [
+      "model.analytics.dim_policy",
+      "model.analytics.fct_claims"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 17271189563
+  },
+  {
+    "unique_id": "model.analytics.training_claims_model",
+    "name": "training_claims_model",
+    "schema_name": "ML",
+    "materialization": "table",
+    "path": "models/training_claims_model.sql",
+    "depends_on": [
+      "model.analytics.feat_claim_severity",
+      "model.analytics.feat_policy_risk"
+    ],
+    "columns": [
+      "id",
+      "policy_id",
+      "amount",
+      "event_date"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "is_incremental": false,
+    "sql_hash": null,
+    "estimated_bytes_scanned": 25003940523
+  }
+]

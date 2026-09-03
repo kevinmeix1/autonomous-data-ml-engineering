@@ -1,0 +1,83 @@
+[
+  {
+    "contract_id": "contract.claims.v2",
+    "dataset": "RAW.CLAIM.claims",
+    "owner": "claims-data-owners",
+    "schema_columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "freshness_sla_minutes": 120,
+    "uniqueness_keys": [
+      "claim_id"
+    ],
+    "allowed_null_rates": {
+      "incurred_amount": 0.1,
+      "paid_amount": 0.2
+    },
+    "version": 1,
+    "consumers": [
+      "model.analytics.stg_claims",
+      "ml.claims_severity_v3"
+    ]
+  }
+]

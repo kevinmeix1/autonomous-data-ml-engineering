@@ -1,0 +1,9 @@
+{
+  "model.analytics.stg_claims": "select * from source_table -- stg_claims incremental=False",
+  "model.analytics.stg_policies": "select * from source_table -- stg_policies incremental=False",
+  "model.analytics.dim_policy": "select * from source_table -- dim_policy incremental=False",
+  "model.analytics.fct_claims": "{{ config(materialized='incremental', unique_key='claim_id') }}\nselect\n  c.claim_id as id,\n  c.claim_id,\n  c.policy_id,\n  c.incurred_amount as amount,\n  c.loss_date as event_date,\n  current_timestamp() as updated_at\nfrom {{ ref('stg_claims') }} c\nleft join {{ ref('dim_policy') }} p on c.policy_id = p.policy_id\n{% if is_incremental() %}\nwhere c.report_date > (select max(event_date) from {{ this }})\n{% endif %}",
+  "model.analytics.feat_claim_severity": "select * from source_table -- feat_claim_severity incremental=False",
+  "model.analytics.feat_policy_risk": "select\n  p.policy_id as id,\n  p.policy_id,\n  count(c.claim_id) as claim_count,\n  avg(c.amount) as avg_claim\nfrom {{ ref('dim_policy') }} p\nleft join {{ ref('fct_claims') }} c on p.policy_id = c.policy_id\ngroup by 1,2",
+  "model.analytics.training_claims_model": "select * from source_table -- training_claims_model incremental=False"
+}

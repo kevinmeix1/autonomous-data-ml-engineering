@@ -1,0 +1,1154 @@
+[
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T22:25:15.038804+00:00",
+    "value": 867.8823067949761,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T22:25:15.038804+00:00",
+    "value": 241.03041592209138,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T22:25:15.038804+00:00",
+    "value": 480.7354044208756,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T21:25:15.038804+00:00",
+    "value": 441.37077428738485,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T21:25:15.038804+00:00",
+    "value": 177.42331603404955,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T21:25:15.038804+00:00",
+    "value": 1177.366639230842,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T20:25:15.038804+00:00",
+    "value": 63.64087243573534,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T20:25:15.038804+00:00",
+    "value": 628.1526353203086,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T20:25:15.038804+00:00",
+    "value": 357.61085675082745,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T19:25:15.038804+00:00",
+    "value": 963.2240455915229,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T19:25:15.038804+00:00",
+    "value": 420.06322152162954,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T19:25:15.038804+00:00",
+    "value": 965.354743134093,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T18:25:15.038804+00:00",
+    "value": 663.6597888666716,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T18:25:15.038804+00:00",
+    "value": 731.0935207221078,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T18:25:15.038804+00:00",
+    "value": 745.5247489945418,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T17:25:15.038804+00:00",
+    "value": 811.996988894528,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T17:25:15.038804+00:00",
+    "value": 188.47977266780867,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T17:25:15.038804+00:00",
+    "value": 447.3376874012364,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T16:25:15.038804+00:00",
+    "value": 458.9757865954068,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T16:25:15.038804+00:00",
+    "value": 786.4816693131172,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T16:25:15.038804+00:00",
+    "value": 1097.9801568595603,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T15:25:15.038804+00:00",
+    "value": 838.8971564281367,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T15:25:15.038804+00:00",
+    "value": 223.73450950116845,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T15:25:15.038804+00:00",
+    "value": 808.0509527769822,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T14:25:15.038804+00:00",
+    "value": 859.934742728511,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T14:25:15.038804+00:00",
+    "value": 163.20769699257912,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T14:25:15.038804+00:00",
+    "value": 673.7452959663221,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T13:25:15.038804+00:00",
+    "value": 384.96304668358533,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T13:25:15.038804+00:00",
+    "value": 991.540491419901,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T13:25:15.038804+00:00",
+    "value": 171.43484067911635,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T12:25:15.038804+00:00",
+    "value": 530.4895780487303,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T12:25:15.038804+00:00",
+    "value": 214.29535427034648,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T12:25:15.038804+00:00",
+    "value": 1018.2017732639214,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T11:25:15.038804+00:00",
+    "value": 745.0253684036736,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T11:25:15.038804+00:00",
+    "value": 222.01673520583492,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T11:25:15.038804+00:00",
+    "value": 993.7787954454258,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T10:25:15.038804+00:00",
+    "value": 788.3333734330079,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T10:25:15.038804+00:00",
+    "value": 777.4506013754547,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T10:25:15.038804+00:00",
+    "value": 555.1820768871021,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T09:25:15.038804+00:00",
+    "value": 421.4272306550973,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T09:25:15.038804+00:00",
+    "value": 1170.9414709395587,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T09:25:15.038804+00:00",
+    "value": 570.437629107951,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T08:25:15.038804+00:00",
+    "value": 1039.7133434276684,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T08:25:15.038804+00:00",
+    "value": 244.0042394435645,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T08:25:15.038804+00:00",
+    "value": 47.34803189529422,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T07:25:15.038804+00:00",
+    "value": 77.416596856994,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T07:25:15.038804+00:00",
+    "value": 357.1830901004007,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T07:25:15.038804+00:00",
+    "value": 921.3509817111477,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T06:25:15.038804+00:00",
+    "value": 672.803053412959,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T06:25:15.038804+00:00",
+    "value": 171.8228010132739,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T06:25:15.038804+00:00",
+    "value": 910.8589033054968,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T05:25:15.038804+00:00",
+    "value": 181.70292080967408,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T05:25:15.038804+00:00",
+    "value": 406.99970021110096,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T05:25:15.038804+00:00",
+    "value": 720.5950936445644,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T04:25:15.038804+00:00",
+    "value": 580.3732679976792,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T04:25:15.038804+00:00",
+    "value": 960.1706804375737,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T04:25:15.038804+00:00",
+    "value": 1161.1434214830201,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T03:25:15.038804+00:00",
+    "value": 221.20423286105802,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T03:25:15.038804+00:00",
+    "value": 57.253205743677256,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T03:25:15.038804+00:00",
+    "value": 198.68888458082762,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T02:25:15.038804+00:00",
+    "value": 1049.924896516538,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T02:25:15.038804+00:00",
+    "value": 1197.7849847184689,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T02:25:15.038804+00:00",
+    "value": 664.6023987088996,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T01:25:15.038804+00:00",
+    "value": 739.8903644929268,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T01:25:15.038804+00:00",
+    "value": 929.9856375234192,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T01:25:15.038804+00:00",
+    "value": 681.375356478739,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T00:25:15.038804+00:00",
+    "value": 1076.9973446174668,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T00:25:15.038804+00:00",
+    "value": 69.6384544626161,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-10T00:25:15.038804+00:00",
+    "value": 901.8594296672458,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T23:25:15.038804+00:00",
+    "value": 181.98208666508907,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T23:25:15.038804+00:00",
+    "value": 772.7745966221925,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T23:25:15.038804+00:00",
+    "value": 26.114106760413435,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T22:25:15.038804+00:00",
+    "value": 583.3892541202579,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T22:25:15.038804+00:00",
+    "value": 789.7125018945139,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T22:25:15.038804+00:00",
+    "value": 513.1042790491063,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T21:25:15.038804+00:00",
+    "value": 239.8477256685369,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T21:25:15.038804+00:00",
+    "value": 1115.5767183000803,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T21:25:15.038804+00:00",
+    "value": 1069.3267572485015,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T20:25:15.038804+00:00",
+    "value": 410.207234261507,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T20:25:15.038804+00:00",
+    "value": 953.1058440218018,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T20:25:15.038804+00:00",
+    "value": 995.8479938260454,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T19:25:15.038804+00:00",
+    "value": 583.3958362180737,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T19:25:15.038804+00:00",
+    "value": 1145.761090732797,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T19:25:15.038804+00:00",
+    "value": 837.4669366988319,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T18:25:15.038804+00:00",
+    "value": 834.5426453542007,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T18:25:15.038804+00:00",
+    "value": 584.2546416875642,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T18:25:15.038804+00:00",
+    "value": 913.6736174991046,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T17:25:15.038804+00:00",
+    "value": 640.0978543397979,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T17:25:15.038804+00:00",
+    "value": 997.9533836709417,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T17:25:15.038804+00:00",
+    "value": 1028.2934887260421,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T16:25:15.038804+00:00",
+    "value": 1080.689435021899,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T16:25:15.038804+00:00",
+    "value": 685.4151984164819,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T16:25:15.038804+00:00",
+    "value": 320.25951849978264,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T15:25:15.038804+00:00",
+    "value": 846.4541561546675,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T15:25:15.038804+00:00",
+    "value": 57.447147807233264,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T15:25:15.038804+00:00",
+    "value": 461.8638863531558,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T14:25:15.038804+00:00",
+    "value": 114.69499130265272,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T14:25:15.038804+00:00",
+    "value": 230.5988822248518,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T14:25:15.038804+00:00",
+    "value": 912.2917095335399,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T13:25:15.038804+00:00",
+    "value": 991.5653161034255,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T13:25:15.038804+00:00",
+    "value": 58.01643159377762,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T13:25:15.038804+00:00",
+    "value": 303.9862270889901,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T12:25:15.038804+00:00",
+    "value": 308.7862984377031,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T12:25:15.038804+00:00",
+    "value": 185.35997863558742,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T12:25:15.038804+00:00",
+    "value": 701.4202812727008,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T11:25:15.038804+00:00",
+    "value": 508.0010436072284,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T11:25:15.038804+00:00",
+    "value": 758.6719024250294,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T11:25:15.038804+00:00",
+    "value": 947.2494232570112,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T10:25:15.038804+00:00",
+    "value": 910.2109947409879,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T10:25:15.038804+00:00",
+    "value": 1099.3945851027684,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T10:25:15.038804+00:00",
+    "value": 320.89486181689307,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T09:25:15.038804+00:00",
+    "value": 652.0499328897145,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T09:25:15.038804+00:00",
+    "value": 1050.8721410176568,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T09:25:15.038804+00:00",
+    "value": 266.4891244916554,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T08:25:15.038804+00:00",
+    "value": 1155.2515162150617,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T08:25:15.038804+00:00",
+    "value": 488.02583053595737,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T08:25:15.038804+00:00",
+    "value": 383.9382954585754,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T07:25:15.038804+00:00",
+    "value": 918.7221837854593,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T07:25:15.038804+00:00",
+    "value": 894.677806885457,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T07:25:15.038804+00:00",
+    "value": 368.32689925913104,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T06:25:15.038804+00:00",
+    "value": 669.7581883701487,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T06:25:15.038804+00:00",
+    "value": 563.7782181688822,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T06:25:15.038804+00:00",
+    "value": 237.17637197629566,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T05:25:15.038804+00:00",
+    "value": 1135.3219712170599,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T05:25:15.038804+00:00",
+    "value": 100.2021711651987,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T05:25:15.038804+00:00",
+    "value": 797.9555235480381,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T04:25:15.038804+00:00",
+    "value": 652.1709614502312,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T04:25:15.038804+00:00",
+    "value": 146.27938585950164,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T04:25:15.038804+00:00",
+    "value": 981.9529810416735,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T03:25:15.038804+00:00",
+    "value": 686.7025752886035,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T03:25:15.038804+00:00",
+    "value": 791.4081490798006,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T03:25:15.038804+00:00",
+    "value": 86.21562817217952,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T02:25:15.038804+00:00",
+    "value": 687.7108209822213,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T02:25:15.038804+00:00",
+    "value": 269.47212594376566,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T02:25:15.038804+00:00",
+    "value": 827.625917287097,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T01:25:15.038804+00:00",
+    "value": 38.476552326482846,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T01:25:15.038804+00:00",
+    "value": 1116.0724294989275,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T01:25:15.038804+00:00",
+    "value": 818.9012597344845,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T00:25:15.038804+00:00",
+    "value": 610.9355649325156,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T00:25:15.038804+00:00",
+    "value": 421.899440840625,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-09T00:25:15.038804+00:00",
+    "value": 768.2650779375873,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-08T23:25:15.038804+00:00",
+    "value": 529.5805765626628,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-08T23:25:15.038804+00:00",
+    "value": 961.705105087241,
+    "unit": "Seconds"
+  },
+  {
+    "namespace": "Airflow/DAG",
+    "metric": "TaskDuration",
+    "dag_id": "insurance_daily_pipeline",
+    "timestamp": "2026-08-08T23:25:15.038804+00:00",
+    "value": 892.7932409923816,
+    "unit": "Seconds"
+  }
+]

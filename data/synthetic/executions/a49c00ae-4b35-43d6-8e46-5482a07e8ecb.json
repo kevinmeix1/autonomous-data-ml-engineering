@@ -1,0 +1,2178 @@
+{
+  "execution_id": "a49c00ae-4b35-43d6-8e46-5482a07e8ecb",
+  "agent": "pipeline_sre",
+  "objective": "Investigate insurance_daily_pipeline",
+  "state": "completed",
+  "start_time": "2026-08-10T22:34:33.616172+00:00",
+  "end_time": "2026-08-10T22:34:33.622605+00:00",
+  "investigation_steps": [
+    {
+      "at": "2026-08-10T22:34:33.616185+00:00",
+      "state": "observing",
+      "step": "observing",
+      "detail": "Loading DAG status for insurance_daily_pipeline"
+    },
+    {
+      "at": "2026-08-10T22:34:33.616552+00:00",
+      "state": "detecting",
+      "step": "detecting",
+      "detail": "Detected failed tasks: ['extract_claims', 'load_raw_claims', 'dbt_run_staging', 'dbt_run_core', 'dbt_test_core', 'feature_build', 'score_claims_model']"
+    },
+    {
+      "at": "2026-08-10T22:34:33.616560+00:00",
+      "state": "investigating",
+      "step": "investigating",
+      "detail": "Collecting task logs and platform signals"
+    },
+    {
+      "at": "2026-08-10T22:34:33.619656+00:00",
+      "state": "hypothesizing",
+      "step": "hypothesizing",
+      "detail": "Forming root-cause hypotheses from rules + anomalies"
+    },
+    {
+      "at": "2026-08-10T22:34:33.620753+00:00",
+      "state": "testing",
+      "step": "testing",
+      "detail": "Ranking hypotheses with deterministic RCA engine"
+    },
+    {
+      "at": "2026-08-10T22:34:33.622454+00:00",
+      "state": "verifying",
+      "step": "verifying",
+      "detail": "Validating pipeline health"
+    }
+  ],
+  "tool_calls": [
+    {
+      "call_id": "706c13eb-800f-4905-b55e-517314eaf03f",
+      "tool_name": "get_airflow_dag_status",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline"
+      },
+      "success": true,
+      "latency_ms": 0.13487483374774456,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'last_run_status': 'failed', 'is_paused': False, 'tasks': [{'task_id': 'extract_claims', 'dag_id': 'insurance_daily_pipeline', 'operator': 'PythonOperator', 'status': 'failed', 'start_date': '2026-08-10T19:25:15.038804Z', 'end_date': '2026-08-10T20:25:15.038804Z', 'duration_seconds': 43.72954265470942, 'try_number': 1, 'max_tries': 3, 'upstream': [], 'downstream': ['load_raw_claims'], 'log_excerpt': '[ERROR] Connection refused to claims source SFTP\\nTraceba",
+      "started_at": "2026-08-10T22:34:33.616207Z",
+      "ended_at": "2026-08-10T22:34:33.616340Z"
+    },
+    {
+      "call_id": "a094d285-1106-4578-93a3-26a0c239184b",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "extract_claims"
+      },
+      "success": true,
+      "latency_ms": 0.026958994567394257,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'extract_claims', 'log': '[ERROR] Connection refused to claims source SFTP\\nTraceback: SourceExtractError\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.616577Z",
+      "ended_at": "2026-08-10T22:34:33.616604Z"
+    },
+    {
+      "call_id": "3384409a-3b01-41e7-ba79-2be7c234fb25",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "load_raw_claims"
+      },
+      "success": true,
+      "latency_ms": 0.014124903827905655,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'load_raw_claims', 'log': '[ERROR] Partition not found: s3://claims-landing/dt=2026-08-09/\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.616649Z",
+      "ended_at": "2026-08-10T22:34:33.616663Z"
+    },
+    {
+      "call_id": "39f46978-6b09-4c57-ba9c-c00b33b80bcf",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "dbt_run_staging"
+      },
+      "success": true,
+      "latency_ms": 0.04245806485414505,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'dbt_run_staging', 'log': '[ERROR] Database Error in model stg_claims\\ncolumn claim_status unexpected value REOPENED\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.616799Z",
+      "ended_at": "2026-08-10T22:34:33.616845Z"
+    },
+    {
+      "call_id": "278ce26b-587f-446c-a8ad-c943d4916c8c",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "dbt_run_core"
+      },
+      "success": true,
+      "latency_ms": 0.422916142269969,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'dbt_run_core', 'log': '[WARN] warehouse TRANSFORM_WH queued_overload_time=900s\\n[ERROR] query delayed then cancelled\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.616953Z",
+      "ended_at": "2026-08-10T22:34:33.617376Z"
+    },
+    {
+      "call_id": "122dc095-7f4e-43ce-9832-0c432976092d",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "dbt_test_core"
+      },
+      "success": true,
+      "latency_ms": 0.030583934858441353,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'dbt_test_core', 'log': '[ERROR] freshness check failed for RAW.CLAIM.claims SLA=2h actual=48h\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.617491Z",
+      "ended_at": "2026-08-10T22:34:33.617522Z"
+    },
+    {
+      "call_id": "ec65dce1-9044-4fa0-8d35-86d851b279fa",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "feature_build"
+      },
+      "success": true,
+      "latency_ms": 0.02166605554521084,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'feature_build', 'log': '[ERROR] upstream dbt_test_core failed\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.617612Z",
+      "ended_at": "2026-08-10T22:34:33.617634Z"
+    },
+    {
+      "call_id": "77ae8dff-3463-4d1a-b358-49039515d9cc",
+      "tool_name": "get_task_logs",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "task_id": "score_claims_model"
+      },
+      "success": true,
+      "latency_ms": 0.027416972443461418,
+      "error": null,
+      "output_summary": "{'dag_id': 'insurance_daily_pipeline', 'task_id': 'score_claims_model', 'log': '[ERROR] Feature table missing; cannot score\\n', 'status': 'failed'}",
+      "started_at": "2026-08-10T22:34:33.617748Z",
+      "ended_at": "2026-08-10T22:34:33.617776Z"
+    },
+    {
+      "call_id": "dd927d91-6b37-468a-8c6e-5c7f6b4363b1",
+      "tool_name": "get_dbt_tests",
+      "risk": "READ_ONLY",
+      "args": {
+        "status": "fail"
+      },
+      "success": true,
+      "latency_ms": 0.09620795026421547,
+      "error": null,
+      "output_summary": "{'tests': [{'test_id': '223148c7-58b0-4b82-8439-5e28f1de0c1f', 'test_name': 'accepted_values_stg_claims_claim_status', 'model_unique_id': 'model.analytics.stg_claims', 'status': 'fail', 'failures': 1284, 'dimension': 'validity', 'message': 'Found values not in accepted set', 'executed_at': '2026-08-10T22:25:15.038804Z', 'column_name': 'claim_status'}, {'test_id': '90acd1db-1884-456c-be2d-b361b20d0991', 'test_name': 'not_null_fct_claims_incurred_amount', 'model_unique_id': 'model.analytics.fct_cl",
+      "started_at": "2026-08-10T22:34:33.617848Z",
+      "ended_at": "2026-08-10T22:34:33.617943Z"
+    },
+    {
+      "call_id": "8143396f-bed5-4b97-aeba-dad8c959888a",
+      "tool_name": "get_dbt_run",
+      "risk": "READ_ONLY",
+      "args": {},
+      "success": true,
+      "latency_ms": 0.098041957244277,
+      "error": null,
+      "output_summary": "{'models': [{'unique_id': 'model.analytics.stg_claims', 'name': 'stg_claims', 'schema_name': 'CORE', 'materialization': 'view', 'path': 'models/stg_claims.sql', 'depends_on': ['RAW.CLAIM.claims'], 'columns': ['id', 'policy_id', 'amount', 'event_date'], 'has_tests': True, 'has_docs': False, 'is_incremental': False, 'sql_hash': None, 'estimated_bytes_scanned': 20500076924}, {'unique_id': 'model.analytics.stg_policies', 'name': 'stg_policies', 'schema_name': 'CORE', 'materialization': 'view', 'path",
+      "started_at": "2026-08-10T22:34:33.618072Z",
+      "ended_at": "2026-08-10T22:34:33.618170Z"
+    },
+    {
+      "call_id": "9db15a39-5824-46b2-ac41-f651631820bb",
+      "tool_name": "get_schema_history",
+      "risk": "READ_ONLY",
+      "args": {
+        "table_id": "RAW.CLAIM.claims"
+      },
+      "success": true,
+      "latency_ms": 0.05162484012544155,
+      "error": null,
+      "output_summary": "{'versions': [{'version_id': '5e6d0c46-cbda-4bed-a190-e223b8852693', 'table_id': 'RAW.CLAIM.claims', 'version': 1, 'columns': [{'name': 'claim_id', 'data_type': 'VARCHAR', 'nullable': False, 'is_primary_key': True, 'description': None, 'enum_values': None}, {'name': 'policy_id', 'data_type': 'VARCHAR', 'nullable': False, 'is_primary_key': False, 'description': None, 'enum_values': None}, {'name': 'loss_date', 'data_type': 'DATE', 'nullable': False, 'is_primary_key': False, 'description': None, '",
+      "started_at": "2026-08-10T22:34:33.618583Z",
+      "ended_at": "2026-08-10T22:34:33.618634Z"
+    },
+    {
+      "call_id": "b4bb5e30-479b-4301-ba30-97eb283000da",
+      "tool_name": "get_data_profile",
+      "risk": "READ_ONLY",
+      "args": {
+        "table_id": "RAW.CLAIM.claims"
+      },
+      "success": true,
+      "latency_ms": 0.013625016435980797,
+      "error": null,
+      "output_summary": "{'profile': {'row_count': 1508640, 'null_rates': {'claim_id': 0.030448510571908616, 'policy_id': 0.007641963427481741, 'loss_date': 0.03812554000375756, 'report_date': 0.02696895150598129, 'claim_status': 0.038931323931527914, 'incurred_amount': 0.42, 'paid_amount': 2.8594806397175266e-05}, 'distinct_counts': {'claim_id': 42587, 'policy_id': 64142, 'loss_date': 2652, 'report_date': 14762, 'claim_status': 47676, 'incurred_amount': 40406, 'paid_amount': 31485}, 'freshness_hours': 48, 'historical_n",
+      "started_at": "2026-08-10T22:34:33.618749Z",
+      "ended_at": "2026-08-10T22:34:33.618763Z"
+    },
+    {
+      "call_id": "0d898f26-d58d-4c43-9df1-8b78d1ef422d",
+      "tool_name": "compare_historical_metrics",
+      "risk": "READ_ONLY",
+      "args": {
+        "table_id": "RAW.CLAIM.claims",
+        "column": "incurred_amount"
+      },
+      "success": true,
+      "latency_ms": 0.19587506540119648,
+      "error": null,
+      "output_summary": "{'column': 'incurred_amount', 'current_null_rate': 0.42, 'historical_mean': 0.026494224174102885, 'historical_std': 0.015559272658511118, 'z_score': 25.29075648087216, 'is_anomaly': True}",
+      "started_at": "2026-08-10T22:34:33.618905Z",
+      "ended_at": "2026-08-10T22:34:33.619099Z"
+    },
+    {
+      "call_id": "d7308061-08eb-4b66-8c48-ac9903b10e64",
+      "tool_name": "get_cloudwatch_metrics",
+      "risk": "READ_ONLY",
+      "args": {
+        "dag_id": "insurance_daily_pipeline",
+        "hours": 24
+      },
+      "success": true,
+      "latency_ms": 0.052540795877575874,
+      "error": null,
+      "output_summary": "{'metrics': [{'namespace': 'Airflow/DAG', 'metric': 'TaskDuration', 'dag_id': 'insurance_daily_pipeline', 'timestamp': '2026-08-10T22:25:15.038804+00:00', 'value': 867.8823067949761, 'unit': 'Seconds'}, {'namespace': 'Airflow/DAG', 'metric': 'TaskDuration', 'dag_id': 'insurance_daily_pipeline', 'timestamp': '2026-08-10T22:25:15.038804+00:00', 'value': 241.03041592209138, 'unit': 'Seconds'}, {'namespace': 'Airflow/DAG', 'metric': 'TaskDuration', 'dag_id': 'insurance_daily_pipeline', 'timestamp': ",
+      "started_at": "2026-08-10T22:34:33.619150Z",
+      "ended_at": "2026-08-10T22:34:33.619202Z"
+    },
+    {
+      "call_id": "835fbf53-6e58-4cc1-920b-1bbad6f14cc2",
+      "tool_name": "get_snowflake_query_history",
+      "risk": "READ_ONLY",
+      "args": {
+        "status": "FAILED",
+        "limit": 10
+      },
+      "success": true,
+      "latency_ms": 0.0719169620424509,
+      "error": null,
+      "output_summary": "{'queries': [{'query_id': 'Q00017', 'warehouse': 'ML_WH', 'user_name': 'dbt_service', 'database': 'ANALYTICS', 'schema_name': 'ML', 'query_text': 'select * from training_claims_model', 'start_time': '2026-08-10T15:25:15.038804Z', 'end_time': '2026-08-10T15:26:13.487804Z', 'total_elapsed_ms': 58449, 'bytes_scanned': 200031524184, 'rows_produced': 2244514, 'credits_used': 0.5163, 'status': 'FAILED', 'error_message': 'Statement reached its timeout of 3600 second(s) and was canceled.', 'dbt_model': ",
+      "started_at": "2026-08-10T22:34:33.619346Z",
+      "ended_at": "2026-08-10T22:34:33.619417Z"
+    },
+    {
+      "call_id": "207a52e3-44d2-4999-b5ff-179446069885",
+      "tool_name": "get_dbt_lineage",
+      "risk": "READ_ONLY",
+      "args": {
+        "model_unique_id": "model.analytics.fct_claims"
+      },
+      "success": true,
+      "latency_ms": 0.08291704580187798,
+      "error": null,
+      "output_summary": "{'upstream': [{'id': 'RAW.POLICY.policies', 'node_type': 'table', 'name': 'policies'}, {'id': 'model.analytics.stg_claims', 'node_type': 'dbt_model', 'name': 'stg_claims'}, {'id': 'RAW.CLAIM.claims', 'node_type': 'table', 'name': 'claims'}, {'id': 'model.analytics.stg_policies', 'node_type': 'dbt_model', 'name': 'stg_policies'}, {'id': 'model.analytics.dim_policy', 'node_type': 'dbt_model', 'name': 'dim_policy'}], 'downstream': [{'id': 'model.analytics.feat_policy_risk', 'node_type': 'dbt_model'",
+      "started_at": "2026-08-10T22:34:33.619509Z",
+      "ended_at": "2026-08-10T22:34:33.619592Z"
+    },
+    {
+      "call_id": "f90f42e2-546a-4c8f-8d90-3e034478a034",
+      "tool_name": "create_incident_report",
+      "risk": "SAFE_AUTOMATION",
+      "args": {
+        "incident_id": "INC-0000",
+        "root_cause": "schema_change",
+        "summary": "Investigate insurance_daily_pipeline",
+        "remediation": "Update dbt accepted_values and data contract",
+        "evidence": [
+          "log_match:unexpected value|accepted_values|schema|REOPENED",
+          "failed_test:accepted_values_stg_claims_claim_status",
+          "log_match:unexpected value|accepted_values|schema|REOPENED"
+        ]
+      },
+      "success": true,
+      "latency_ms": 0.8187920320779085,
+      "error": null,
+      "output_summary": "{'report_id': 'RPT-INC-0000', 'path': 'data/synthetic/incident_reports/RPT-INC-0000.md', 'status': 'written'}",
+      "started_at": "2026-08-10T22:34:33.620844Z",
+      "ended_at": "2026-08-10T22:34:33.621656Z"
+    },
+    {
+      "call_id": "3b8c0c44-d959-4a87-9a93-32e65b4714ff",
+      "tool_name": "create_incident_report",
+      "risk": "SAFE_AUTOMATION",
+      "args": {
+        "incident_id": "INC-0000",
+        "root_cause": "schema_change",
+        "summary": "Investigate insurance_daily_pipeline",
+        "remediation": "create_incident_report:{'incident_id': 'schema', 'root_cause': 'schema_change', 'summary': 'Update accepted values / contract', 'remediation': 'Update dbt accepted_values and data contract'}",
+        "evidence": [
+          "log_match:unexpected value|accepted_values|schema|REOPENED",
+          "failed_test:accepted_values_stg_claims_claim_status",
+          "log_match:unexpected value|accepted_values|schema|REOPENED"
+        ]
+      },
+      "success": true,
+      "latency_ms": 0.4475829191505909,
+      "error": null,
+      "output_summary": "{'report_id': 'RPT-INC-0000', 'path': 'data/synthetic/incident_reports/RPT-INC-0000.md', 'status': 'written'}",
+      "started_at": "2026-08-10T22:34:33.621806Z",
+      "ended_at": "2026-08-10T22:34:33.622251Z"
+    },
+    {
+      "call_id": "daad4754-d1d5-49c2-9fee-c812b7798ef8",
+      "tool_name": "validate_pipeline",
+      "risk": "SAFE_AUTOMATION",
+      "args": {
+        "dag_id": "insurance_daily_pipeline"
+      },
+      "success": true,
+      "latency_ms": 0.044082989916205406,
+      "error": null,
+      "output_summary": "{'healthy': False, 'failed_tasks': ['extract_claims', 'load_raw_claims', 'dbt_run_staging', 'dbt_run_core', 'dbt_test_core', 'feature_build', 'score_claims_model'], 'failed_tests': ['accepted_values_stg_claims_claim_status', 'not_null_fct_claims_incurred_amount', 'unique_fct_claims_claim_id'], 'message': 'issues remain'}",
+      "started_at": "2026-08-10T22:34:33.622495Z",
+      "ended_at": "2026-08-10T22:34:33.622539Z"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "3c7a9a63-fcfe-4ae5-a2a3-4b4703566a22",
+      "kind": "tool_result",
+      "summary": "get_airflow_dag_status returned structured data",
+      "source": "get_airflow_dag_status",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "last_run_status": "failed",
+          "is_paused": false,
+          "tasks": [
+            {
+              "task_id": "extract_claims",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "PythonOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 43.72954265470942,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [],
+              "downstream": [
+                "load_raw_claims"
+              ],
+              "log_excerpt": "[ERROR] Connection refused to claims source SFTP\nTraceback: SourceExtractError\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "extract_policies",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "PythonOperator",
+              "status": "success",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 260.86973224272685,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [],
+              "downstream": [
+                "load_raw_policies"
+              ],
+              "log_excerpt": "[2026-08-10T22:25:15.038804+00:00] Task extract_policies completed successfully\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "load_raw_claims",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 140.27993303011885,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "extract_claims"
+              ],
+              "downstream": [
+                "dbt_run_staging"
+              ],
+              "log_excerpt": "[ERROR] Partition not found: s3://claims-landing/dt=2026-08-09/\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "load_raw_policies",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "success",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 396.23568451176885,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "extract_policies"
+              ],
+              "downstream": [
+                "dbt_run_staging"
+              ],
+              "log_excerpt": "[2026-08-10T22:25:15.038804+00:00] Task load_raw_policies completed successfully\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "dbt_run_staging",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 128.87489690429555,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "load_raw_claims",
+                "load_raw_policies"
+              ],
+              "downstream": [
+                "dbt_run_core"
+              ],
+              "log_excerpt": "[ERROR] Database Error in model stg_claims\ncolumn claim_status unexpected value REOPENED\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "dbt_run_core",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 85.29549318800852,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "dbt_run_staging"
+              ],
+              "downstream": [
+                "dbt_test_core"
+              ],
+              "log_excerpt": "[WARN] warehouse TRANSFORM_WH queued_overload_time=900s\n[ERROR] query delayed then cancelled\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "dbt_test_core",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 419.9994364147992,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "dbt_run_core"
+              ],
+              "downstream": [
+                "feature_build"
+              ],
+              "log_excerpt": "[ERROR] freshness check failed for RAW.CLAIM.claims SLA=2h actual=48h\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "feature_build",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "BashOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 344.9739072212355,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "dbt_test_core"
+              ],
+              "downstream": [
+                "score_claims_model"
+              ],
+              "log_excerpt": "[ERROR] upstream dbt_test_core failed\n",
+              "pool": "default_pool",
+              "queue": "default"
+            },
+            {
+              "task_id": "score_claims_model",
+              "dag_id": "insurance_daily_pipeline",
+              "operator": "PythonOperator",
+              "status": "failed",
+              "start_date": "2026-08-10T19:25:15.038804Z",
+              "end_date": "2026-08-10T20:25:15.038804Z",
+              "duration_seconds": 546.4894355451836,
+              "try_number": 1,
+              "max_tries": 3,
+              "upstream": [
+                "feature_build"
+              ],
+              "downstream": [],
+              "log_excerpt": "[ERROR] Feature table missing; cannot score\n",
+              "pool": "default_pool",
+              "queue": "default"
+            }
+          ],
+          "failed_tasks": [
+            "extract_claims",
+            "load_raw_claims",
+            "dbt_run_staging",
+            "dbt_run_core",
+            "dbt_test_core",
+            "feature_build",
+            "score_claims_model"
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.616481Z"
+    },
+    {
+      "evidence_id": "e6c1dd68-dc8b-4b8d-b120-f9fe3b41e6be",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "extract_claims"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "extract_claims",
+          "log": "[ERROR] Connection refused to claims source SFTP\nTraceback: SourceExtractError\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.616625Z"
+    },
+    {
+      "evidence_id": "accaae9d-40fb-4d35-95a9-c5d408fb7e9c",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "load_raw_claims"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "load_raw_claims",
+          "log": "[ERROR] Partition not found: s3://claims-landing/dt=2026-08-09/\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.616680Z"
+    },
+    {
+      "evidence_id": "20ce250e-3bef-4655-868d-8e3b67f1b6cd",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_run_staging"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_run_staging",
+          "log": "[ERROR] Database Error in model stg_claims\ncolumn claim_status unexpected value REOPENED\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.616887Z"
+    },
+    {
+      "evidence_id": "e6ea31b1-ea0e-421e-b782-85506093795b",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_run_core"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_run_core",
+          "log": "[WARN] warehouse TRANSFORM_WH queued_overload_time=900s\n[ERROR] query delayed then cancelled\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.617424Z"
+    },
+    {
+      "evidence_id": "3ffdbd04-1673-4fe6-8ac5-ea2babd2e96a",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_test_core"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "dbt_test_core",
+          "log": "[ERROR] freshness check failed for RAW.CLAIM.claims SLA=2h actual=48h\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.617557Z"
+    },
+    {
+      "evidence_id": "cef62398-1835-47a6-8aae-0a3392a870e0",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "feature_build"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "feature_build",
+          "log": "[ERROR] upstream dbt_test_core failed\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.617678Z"
+    },
+    {
+      "evidence_id": "e6ae407f-bbd8-4cbb-a716-af8572a86eed",
+      "kind": "tool_result",
+      "summary": "get_task_logs returned structured data",
+      "source": "get_task_logs",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "score_claims_model"
+        },
+        "output": {
+          "dag_id": "insurance_daily_pipeline",
+          "task_id": "score_claims_model",
+          "log": "[ERROR] Feature table missing; cannot score\n",
+          "status": "failed"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.617809Z"
+    },
+    {
+      "evidence_id": "809226df-b402-4e16-a1ad-7f20e1bb074f",
+      "kind": "tool_result",
+      "summary": "get_dbt_tests returned structured data",
+      "source": "get_dbt_tests",
+      "data": {
+        "args": {
+          "status": "fail"
+        },
+        "output": {
+          "tests": [
+            {
+              "test_id": "223148c7-58b0-4b82-8439-5e28f1de0c1f",
+              "test_name": "accepted_values_stg_claims_claim_status",
+              "model_unique_id": "model.analytics.stg_claims",
+              "status": "fail",
+              "failures": 1284,
+              "dimension": "validity",
+              "message": "Found values not in accepted set",
+              "executed_at": "2026-08-10T22:25:15.038804Z",
+              "column_name": "claim_status"
+            },
+            {
+              "test_id": "90acd1db-1884-456c-be2d-b361b20d0991",
+              "test_name": "not_null_fct_claims_incurred_amount",
+              "model_unique_id": "model.analytics.fct_claims",
+              "status": "fail",
+              "failures": 9200,
+              "dimension": "completeness",
+              "message": "null spike detected",
+              "executed_at": "2026-08-10T22:25:15.038804Z",
+              "column_name": "incurred_amount"
+            },
+            {
+              "test_id": "c08de7a1-7fc2-46bf-8d5c-eee9c4f595ea",
+              "test_name": "unique_fct_claims_claim_id",
+              "model_unique_id": "model.analytics.fct_claims",
+              "status": "fail",
+              "failures": 356,
+              "dimension": "uniqueness",
+              "message": "duplicate claim_id after replay",
+              "executed_at": "2026-08-10T22:25:15.038804Z",
+              "column_name": "claim_id"
+            }
+          ],
+          "failed_count": 3
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.618022Z"
+    },
+    {
+      "evidence_id": "3e7bb030-db6a-4856-864a-baf285bd09fe",
+      "kind": "tool_result",
+      "summary": "get_dbt_run returned structured data",
+      "source": "get_dbt_run",
+      "data": {
+        "args": {},
+        "output": {
+          "models": [
+            {
+              "unique_id": "model.analytics.stg_claims",
+              "name": "stg_claims",
+              "schema_name": "CORE",
+              "materialization": "view",
+              "path": "models/stg_claims.sql",
+              "depends_on": [
+                "RAW.CLAIM.claims"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": true,
+              "has_docs": false,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 20500076924
+            },
+            {
+              "unique_id": "model.analytics.stg_policies",
+              "name": "stg_policies",
+              "schema_name": "CORE",
+              "materialization": "view",
+              "path": "models/stg_policies.sql",
+              "depends_on": [
+                "RAW.POLICY.policies"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": false,
+              "has_docs": true,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 13019525349
+            },
+            {
+              "unique_id": "model.analytics.dim_policy",
+              "name": "dim_policy",
+              "schema_name": "CORE",
+              "materialization": "table",
+              "path": "models/dim_policy.sql",
+              "depends_on": [
+                "model.analytics.stg_policies"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": true,
+              "has_docs": true,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 44421803022
+            },
+            {
+              "unique_id": "model.analytics.fct_claims",
+              "name": "fct_claims",
+              "schema_name": "CORE",
+              "materialization": "incremental",
+              "path": "models/fct_claims.sql",
+              "depends_on": [
+                "model.analytics.stg_claims",
+                "model.analytics.dim_policy"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": true,
+              "has_docs": true,
+              "is_incremental": true,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 4721365350
+            },
+            {
+              "unique_id": "model.analytics.feat_claim_severity",
+              "name": "feat_claim_severity",
+              "schema_name": "ML",
+              "materialization": "table",
+              "path": "models/feat_claim_severity.sql",
+              "depends_on": [
+                "model.analytics.fct_claims"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": false,
+              "has_docs": true,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 1566090561
+            },
+            {
+              "unique_id": "model.analytics.feat_policy_risk",
+              "name": "feat_policy_risk",
+              "schema_name": "ML",
+              "materialization": "table",
+              "path": "models/feat_policy_risk.sql",
+              "depends_on": [
+                "model.analytics.dim_policy",
+                "model.analytics.fct_claims"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": false,
+              "has_docs": true,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 17271189563
+            },
+            {
+              "unique_id": "model.analytics.training_claims_model",
+              "name": "training_claims_model",
+              "schema_name": "ML",
+              "materialization": "table",
+              "path": "models/training_claims_model.sql",
+              "depends_on": [
+                "model.analytics.feat_claim_severity",
+                "model.analytics.feat_policy_risk"
+              ],
+              "columns": [
+                "id",
+                "policy_id",
+                "amount",
+                "event_date"
+              ],
+              "has_tests": false,
+              "has_docs": true,
+              "is_incremental": false,
+              "sql_hash": null,
+              "estimated_bytes_scanned": 25003940523
+            }
+          ],
+          "failed_signals": [
+            "dbt_run_staging",
+            "dbt_run_core",
+            "dbt_test_core"
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.618518Z"
+    },
+    {
+      "evidence_id": "a635b5cd-8c0f-4dc6-bfd8-2e0fc2d3e473",
+      "kind": "tool_result",
+      "summary": "get_schema_history returned structured data",
+      "source": "get_schema_history",
+      "data": {
+        "args": {
+          "table_id": "RAW.CLAIM.claims"
+        },
+        "output": {
+          "versions": [
+            {
+              "version_id": "5e6d0c46-cbda-4bed-a190-e223b8852693",
+              "table_id": "RAW.CLAIM.claims",
+              "version": 1,
+              "columns": [
+                {
+                  "name": "claim_id",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": true,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "policy_id",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "loss_date",
+                  "data_type": "DATE",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "report_date",
+                  "data_type": "DATE",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "claim_status",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": [
+                    "OPEN",
+                    "CLOSED",
+                    "LITIGATION",
+                    "DENIED"
+                  ]
+                },
+                {
+                  "name": "incurred_amount",
+                  "data_type": "NUMBER",
+                  "nullable": true,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "paid_amount",
+                  "data_type": "NUMBER",
+                  "nullable": true,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                }
+              ],
+              "changed_at": "2026-07-11T22:25:15.038804Z",
+              "change_summary": "initial schema",
+              "changed_by": "schema-registry"
+            },
+            {
+              "version_id": "5b4e96b9-8ed0-4be0-ba2a-88d87fddff59",
+              "table_id": "RAW.CLAIM.claims",
+              "version": 2,
+              "columns": [
+                {
+                  "name": "claim_id",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": true,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "policy_id",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "loss_date",
+                  "data_type": "DATE",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "report_date",
+                  "data_type": "DATE",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "claim_status",
+                  "data_type": "VARCHAR",
+                  "nullable": false,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": [
+                    "OPEN",
+                    "CLOSED",
+                    "LITIGATION",
+                    "DENIED",
+                    "REOPENED"
+                  ]
+                },
+                {
+                  "name": "incurred_amount",
+                  "data_type": "NUMBER",
+                  "nullable": true,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "paid_amount",
+                  "data_type": "NUMBER",
+                  "nullable": true,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                },
+                {
+                  "name": "claim_status_v2",
+                  "data_type": "VARCHAR",
+                  "nullable": true,
+                  "is_primary_key": false,
+                  "description": null,
+                  "enum_values": null
+                }
+              ],
+              "changed_at": "2026-08-10T16:25:15.038804Z",
+              "change_summary": "claim_status enum extended; claim_status_v2 added",
+              "changed_by": "source-system"
+            }
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.618707Z"
+    },
+    {
+      "evidence_id": "d414a96a-8bd2-41e6-b452-f999f7acc909",
+      "kind": "tool_result",
+      "summary": "get_data_profile returned structured data",
+      "source": "get_data_profile",
+      "data": {
+        "args": {
+          "table_id": "RAW.CLAIM.claims"
+        },
+        "output": {
+          "profile": {
+            "row_count": 1508640,
+            "null_rates": {
+              "claim_id": 0.030448510571908616,
+              "policy_id": 0.007641963427481741,
+              "loss_date": 0.03812554000375756,
+              "report_date": 0.02696895150598129,
+              "claim_status": 0.038931323931527914,
+              "incurred_amount": 0.42,
+              "paid_amount": 2.8594806397175266e-05
+            },
+            "distinct_counts": {
+              "claim_id": 42587,
+              "policy_id": 64142,
+              "loss_date": 2652,
+              "report_date": 14762,
+              "claim_status": 47676,
+              "incurred_amount": 40406,
+              "paid_amount": 31485
+            },
+            "freshness_hours": 48,
+            "historical_null_rates": {
+              "claim_id": [
+                0.04390047996020203,
+                0.04734747226489971,
+                0.004282672603393939,
+                0.02429952316583069,
+                0.0034606259234191807,
+                0.03803010826286158,
+                0.03829172146534939,
+                0.0064195732249881406,
+                0.023764118904936567,
+                0.027490179674747196,
+                0.013252831447002955,
+                0.043621652054262876,
+                0.021156897010044348,
+                0.010589910272104104
+              ],
+              "policy_id": [
+                0.02696480443897292,
+                0.03649655345449881,
+                0.010057553169484796,
+                0.015585814565044749,
+                0.04975746783304474,
+                0.032493902881972674,
+                0.021905004195725206,
+                0.025878792051779533,
+                0.006050209793413286,
+                0.011234866851577869,
+                0.01690427810737277,
+                0.029415435922861666,
+                0.011505736629828851,
+                0.011010869222577975
+              ],
+              "loss_date": [
+                0.003549654300451627,
+                0.03155514786350495,
+                0.01144708919055772,
+                0.0452710006503064,
+                0.042981770012687326,
+                0.003542867494432672,
+                0.011900231718449762,
+                0.03344888891481403,
+                0.01071184036852193,
+                0.00661559243625125,
+                0.04677571202903355,
+                0.028552154666264224,
+                0.02363355131558971,
+                0.03923097121453767
+              ],
+              "report_date": [
+                0.040374849888332176,
+                0.009520495718093887,
+                0.004846540711441166,
+                0.02155255912031888,
+                0.02117893115099604,
+                0.02335123340183375,
+                0.03645379247299253,
+                0.03366822736466508,
+                0.04920826056829831,
+                0.004920893557597944,
+                0.02013106410511344,
+                0.01696513026974816,
+                0.04308362681763955,
+                0.012432816696014282
+              ],
+              "claim_status": [
+                0.009510445422040575,
+                0.022430677391656596,
+                0.02109408199172021,
+                0.013927257233347024,
+                0.012490322394105025,
+                0.046163279963800645,
+                0.02215653725267285,
+                0.04306745523809153,
+                0.027516265622492403,
+                0.002529416476244062,
+                0.04996412342063633,
+                0.0418013792539976,
+                0.048449812864237565,
+                0.046318349150406384
+              ],
+              "incurred_amount": [
+                0.042434786720715274,
+                0.0083155555301957,
+                0.024282056272535924,
+                0.010687364959959084,
+                0.020052014627472633,
+                0.0029317699986089463,
+                0.018948655948845806,
+                0.0492654421889863,
+                0.013260152908607598,
+                0.03920353009742847,
+                0.022750418366957167,
+                0.021150374299508147,
+                0.047865882042983664,
+                0.04977113447463569
+              ],
+              "paid_amount": [
+                0.02778841617028091,
+                0.0359204137648163,
+                0.007739841263703207,
+                0.01483539127472821,
+                0.048435468248457944,
+                0.028959014540812813,
+                0.027109760068713712,
+                0.03739877801895321,
+                0.002858263645374154,
+                0.029208879722948562,
+                0.025142519145975678,
+                0.04263599460241427,
+                0.007871636396974163,
+                0.04803894516372252
+              ]
+            }
+          }
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.618873Z"
+    },
+    {
+      "evidence_id": "feeb31a9-d6db-471b-b5ab-00616aa172aa",
+      "kind": "tool_result",
+      "summary": "compare_historical_metrics returned structured data",
+      "source": "compare_historical_metrics",
+      "data": {
+        "args": {
+          "table_id": "RAW.CLAIM.claims",
+          "column": "incurred_amount"
+        },
+        "output": {
+          "column": "incurred_amount",
+          "current_null_rate": 0.42,
+          "historical_mean": 0.026494224174102885,
+          "historical_std": 0.015559272658511118,
+          "z_score": 25.29075648087216,
+          "is_anomaly": true
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.619126Z"
+    },
+    {
+      "evidence_id": "d1d96183-213c-4a10-83fb-f41fafce156b",
+      "kind": "tool_result",
+      "summary": "get_cloudwatch_metrics returned structured data",
+      "source": "get_cloudwatch_metrics",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline",
+          "hours": 24
+        },
+        "output": {
+          "metrics": [
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T22:25:15.038804+00:00",
+              "value": 867.8823067949761,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T22:25:15.038804+00:00",
+              "value": 241.03041592209138,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T22:25:15.038804+00:00",
+              "value": 480.7354044208756,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T21:25:15.038804+00:00",
+              "value": 441.37077428738485,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T21:25:15.038804+00:00",
+              "value": 177.42331603404955,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T21:25:15.038804+00:00",
+              "value": 1177.366639230842,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T20:25:15.038804+00:00",
+              "value": 63.64087243573534,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T20:25:15.038804+00:00",
+              "value": 628.1526353203086,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T20:25:15.038804+00:00",
+              "value": 357.61085675082745,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T19:25:15.038804+00:00",
+              "value": 963.2240455915229,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T19:25:15.038804+00:00",
+              "value": 420.06322152162954,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T19:25:15.038804+00:00",
+              "value": 965.354743134093,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T18:25:15.038804+00:00",
+              "value": 663.6597888666716,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T18:25:15.038804+00:00",
+              "value": 731.0935207221078,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T18:25:15.038804+00:00",
+              "value": 745.5247489945418,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T17:25:15.038804+00:00",
+              "value": 811.996988894528,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T17:25:15.038804+00:00",
+              "value": 188.47977266780867,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T17:25:15.038804+00:00",
+              "value": 447.3376874012364,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T16:25:15.038804+00:00",
+              "value": 458.9757865954068,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T16:25:15.038804+00:00",
+              "value": 786.4816693131172,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T16:25:15.038804+00:00",
+              "value": 1097.9801568595603,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T15:25:15.038804+00:00",
+              "value": 838.8971564281367,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T15:25:15.038804+00:00",
+              "value": 223.73450950116845,
+              "unit": "Seconds"
+            },
+            {
+              "namespace": "Airflow/DAG",
+              "metric": "TaskDuration",
+              "dag_id": "insurance_daily_pipeline",
+              "timestamp": "2026-08-10T15:25:15.038804+00:00",
+              "value": 808.0509527769822,
+              "unit": "Seconds"
+            }
+          ],
+          "anomaly_hints": []
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.619298Z"
+    },
+    {
+      "evidence_id": "02cef63e-0aec-4a1a-bec5-42484bbd4b32",
+      "kind": "tool_result",
+      "summary": "get_snowflake_query_history returned structured data",
+      "source": "get_snowflake_query_history",
+      "data": {
+        "args": {
+          "status": "FAILED",
+          "limit": 10
+        },
+        "output": {
+          "queries": [
+            {
+              "query_id": "Q00017",
+              "warehouse": "ML_WH",
+              "user_name": "dbt_service",
+              "database": "ANALYTICS",
+              "schema_name": "ML",
+              "query_text": "select * from training_claims_model",
+              "start_time": "2026-08-10T15:25:15.038804Z",
+              "end_time": "2026-08-10T15:26:13.487804Z",
+              "total_elapsed_ms": 58449,
+              "bytes_scanned": 200031524184,
+              "rows_produced": 2244514,
+              "credits_used": 0.5163,
+              "status": "FAILED",
+              "error_message": "Statement reached its timeout of 3600 second(s) and was canceled.",
+              "dbt_model": "model.analytics.training_claims_model"
+            },
+            {
+              "query_id": "Q00068",
+              "warehouse": "ANALYTICS_WH",
+              "user_name": "dbt_service",
+              "database": "ANALYTICS",
+              "schema_name": "CORE",
+              "query_text": "select * from stg_policies",
+              "start_time": "2026-08-08T05:25:15.038804Z",
+              "end_time": "2026-08-08T05:25:22.376804Z",
+              "total_elapsed_ms": 7338,
+              "bytes_scanned": 13019525349,
+              "rows_produced": 438715,
+              "credits_used": 0.0346,
+              "status": "FAILED",
+              "error_message": "Statement reached its timeout of 3600 second(s) and was canceled.",
+              "dbt_model": "model.analytics.stg_policies"
+            },
+            {
+              "query_id": "Q00051",
+              "warehouse": "ML_WH",
+              "user_name": "dbt_service",
+              "database": "ANALYTICS",
+              "schema_name": "ML",
+              "query_text": "select * from feat_claim_severity",
+              "start_time": "2026-08-07T00:25:15.038804Z",
+              "end_time": "2026-08-07T00:25:22.944804Z",
+              "total_elapsed_ms": 7906,
+              "bytes_scanned": 12528724488,
+              "rows_produced": 3128709,
+              "credits_used": 0.0335,
+              "status": "FAILED",
+              "error_message": "Statement reached its timeout of 3600 second(s) and was canceled.",
+              "dbt_model": "model.analytics.feat_claim_severity"
+            },
+            {
+              "query_id": "Q00000",
+              "warehouse": "ANALYTICS_WH",
+              "user_name": "dbt_service",
+              "database": "ANALYTICS",
+              "schema_name": "ML",
+              "query_text": "select * from feat_claim_severity",
+              "start_time": "2026-08-05T08:25:15.038804Z",
+              "end_time": "2026-08-05T08:25:16.971804Z",
+              "total_elapsed_ms": 1933,
+              "bytes_scanned": 1566090561,
+              "rows_produced": 2531258,
+              "credits_used": 0.0045,
+              "status": "FAILED",
+              "error_message": "Statement reached its timeout of 3600 second(s) and was canceled.",
+              "dbt_model": "model.analytics.fct_claims"
+            },
+            {
+              "query_id": "Q00034",
+              "warehouse": "ANALYTICS_WH",
+              "user_name": "dbt_service",
+              "database": "ANALYTICS",
+              "schema_name": "CORE",
+              "query_text": "select * from stg_claims",
+              "start_time": "2026-08-04T07:25:15.038804Z",
+              "end_time": "2026-08-04T07:25:24.969804Z",
+              "total_elapsed_ms": 9931,
+              "bytes_scanned": 20500076924,
+              "rows_produced": 3860572,
+              "credits_used": 0.054,
+              "status": "FAILED",
+              "error_message": "Statement reached its timeout of 3600 second(s) and was canceled.",
+              "dbt_model": "model.analytics.stg_claims"
+            }
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.619475Z"
+    },
+    {
+      "evidence_id": "b2e5c48f-e5f5-4ffc-9bc6-25ea029a4001",
+      "kind": "tool_result",
+      "summary": "get_dbt_lineage returned structured data",
+      "source": "get_dbt_lineage",
+      "data": {
+        "args": {
+          "model_unique_id": "model.analytics.fct_claims"
+        },
+        "output": {
+          "upstream": [
+            {
+              "id": "RAW.POLICY.policies",
+              "node_type": "table",
+              "name": "policies"
+            },
+            {
+              "id": "model.analytics.stg_claims",
+              "node_type": "dbt_model",
+              "name": "stg_claims"
+            },
+            {
+              "id": "RAW.CLAIM.claims",
+              "node_type": "table",
+              "name": "claims"
+            },
+            {
+              "id": "model.analytics.stg_policies",
+              "node_type": "dbt_model",
+              "name": "stg_policies"
+            },
+            {
+              "id": "model.analytics.dim_policy",
+              "node_type": "dbt_model",
+              "name": "dim_policy"
+            }
+          ],
+          "downstream": [
+            {
+              "id": "model.analytics.feat_policy_risk",
+              "node_type": "dbt_model",
+              "name": "feat_policy_risk"
+            },
+            {
+              "id": "model.analytics.feat_claim_severity",
+              "node_type": "dbt_model",
+              "name": "feat_claim_severity"
+            },
+            {
+              "id": "app.pricing_engine",
+              "node_type": "application",
+              "name": "pricing_engine"
+            },
+            {
+              "id": "model.analytics.training_claims_model",
+              "node_type": "dbt_model",
+              "name": "training_claims_model"
+            },
+            {
+              "id": "ml.claims_severity_v3",
+              "node_type": "ml_model",
+              "name": "claims_severity"
+            }
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.619632Z"
+    },
+    {
+      "evidence_id": "fbee7eea-2ca9-46aa-a7df-75587fb5504b",
+      "kind": "agent_hypothesis",
+      "summary": "upstream_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "b4e5379f-d911-4357-80f1-f4a8ab54c489",
+        "confidence": 0.92
+      },
+      "confidence": 0.92,
+      "created_at": "2026-08-10T22:34:33.620471Z"
+    },
+    {
+      "evidence_id": "7d08a3a4-65a6-40e4-889c-ed8a319cb686",
+      "kind": "agent_hypothesis",
+      "summary": "schema_change",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "991e2a00-1ae7-4814-8413-5858a111757d",
+        "confidence": 0.9
+      },
+      "confidence": 0.9,
+      "created_at": "2026-08-10T22:34:33.620503Z"
+    },
+    {
+      "evidence_id": "5c73fccf-fc03-4cd8-a4fc-9083dbe6b561",
+      "kind": "agent_hypothesis",
+      "summary": "missing_partition",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "71d6ee24-a813-401e-968f-59c7c5f51b8b",
+        "confidence": 0.9
+      },
+      "confidence": 0.9,
+      "created_at": "2026-08-10T22:34:33.620529Z"
+    },
+    {
+      "evidence_id": "dc651db4-8884-4a12-a314-f0bd30023c7a",
+      "kind": "agent_hypothesis",
+      "summary": "data_freshness_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "75b12bd1-91bc-4566-8737-90231f9b990f",
+        "confidence": 0.88
+      },
+      "confidence": 0.88,
+      "created_at": "2026-08-10T22:34:33.620543Z"
+    },
+    {
+      "evidence_id": "63a20d61-9286-49e8-9374-62802c1a846d",
+      "kind": "agent_hypothesis",
+      "summary": "warehouse_overload",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "fe8de032-4c69-4d00-8bae-14d07509f676",
+        "confidence": 0.87
+      },
+      "confidence": 0.87,
+      "created_at": "2026-08-10T22:34:33.620556Z"
+    },
+    {
+      "evidence_id": "cc70587a-15b2-4f51-a70e-8022f8f1ffce",
+      "kind": "agent_hypothesis",
+      "summary": "downstream_dependency_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "c0351e59-f56d-4659-87df-44fbe9761ba8",
+        "confidence": 0.85
+      },
+      "confidence": 0.85,
+      "created_at": "2026-08-10T22:34:33.620569Z"
+    },
+    {
+      "evidence_id": "240c4cec-4f0c-4a91-9cad-2fcec5ba6bee",
+      "kind": "agent_hypothesis",
+      "summary": "schema_change",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "045f6263-e30d-4705-a579-0b8f59bc93c3",
+        "confidence": 0.86
+      },
+      "confidence": 0.86,
+      "created_at": "2026-08-10T22:34:33.620583Z"
+    },
+    {
+      "evidence_id": "24ff2a65-0175-4453-b251-ad98b056954e",
+      "kind": "agent_hypothesis",
+      "summary": "null_spike",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "d19af78e-7b83-435e-a3c9-2dd2e05fb874",
+        "confidence": 0.86
+      },
+      "confidence": 0.86,
+      "created_at": "2026-08-10T22:34:33.620596Z"
+    },
+    {
+      "evidence_id": "fb4bd7f3-3688-4d86-a7cb-502804987081",
+      "kind": "agent_hypothesis",
+      "summary": "duplicate_records",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "829003f0-403b-4adb-a493-c521520cc112",
+        "confidence": 0.86
+      },
+      "confidence": 0.86,
+      "created_at": "2026-08-10T22:34:33.620609Z"
+    },
+    {
+      "evidence_id": "df42df31-764a-4e9b-b2fd-9baf7e159ee2",
+      "kind": "agent_hypothesis",
+      "summary": "upstream_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "fcf9d347-b559-4ca2-a64f-bdf02f5a5031",
+        "confidence": 0.92
+      },
+      "confidence": 0.92,
+      "created_at": "2026-08-10T22:34:33.620622Z"
+    },
+    {
+      "evidence_id": "f1993976-4bbd-4c40-b535-eca8f62560c6",
+      "kind": "agent_hypothesis",
+      "summary": "schema_change",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "885a6327-4fc5-4121-ba83-27848f93ce96",
+        "confidence": 0.9
+      },
+      "confidence": 0.9,
+      "created_at": "2026-08-10T22:34:33.620634Z"
+    },
+    {
+      "evidence_id": "163f7f11-9faa-447e-9e0b-5da034e8734c",
+      "kind": "agent_hypothesis",
+      "summary": "missing_partition",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "b344f6c1-6d79-4467-9dad-a6e421554c11",
+        "confidence": 0.9
+      },
+      "confidence": 0.9,
+      "created_at": "2026-08-10T22:34:33.620647Z"
+    },
+    {
+      "evidence_id": "b51f15de-98cc-4f92-938b-5fb7c4a1b96c",
+      "kind": "agent_hypothesis",
+      "summary": "data_freshness_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "47554594-aad2-45a6-a986-4ad9a57052d1",
+        "confidence": 0.88
+      },
+      "confidence": 0.88,
+      "created_at": "2026-08-10T22:34:33.620660Z"
+    },
+    {
+      "evidence_id": "0d8db07f-5ae3-45f4-80a8-2b358268ee69",
+      "kind": "agent_hypothesis",
+      "summary": "snowflake_query_timeout",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "d08bb03e-001a-4aa0-a3bf-aad74d0092ba",
+        "confidence": 0.9
+      },
+      "confidence": 0.9,
+      "created_at": "2026-08-10T22:34:33.620696Z"
+    },
+    {
+      "evidence_id": "802e18f6-a73c-4177-b90b-0a7f6e47d8db",
+      "kind": "agent_hypothesis",
+      "summary": "warehouse_overload",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "99b6a850-210c-4b33-a507-fc490d91e29c",
+        "confidence": 0.87
+      },
+      "confidence": 0.87,
+      "created_at": "2026-08-10T22:34:33.620720Z"
+    },
+    {
+      "evidence_id": "a5f4b034-40af-466b-8fb8-29c24c9566ad",
+      "kind": "agent_hypothesis",
+      "summary": "downstream_dependency_failure",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "46d5ff61-7422-4f68-b3ce-624989bb6f6e",
+        "confidence": 0.85
+      },
+      "confidence": 0.85,
+      "created_at": "2026-08-10T22:34:33.620734Z"
+    },
+    {
+      "evidence_id": "73f4a340-5220-4601-994a-b534e3aaa34a",
+      "kind": "agent_hypothesis",
+      "summary": "null_spike",
+      "source": "pipeline_sre",
+      "data": {
+        "hypothesis_id": "55235c90-7d76-4cc5-bef7-9133b90d41de",
+        "confidence": 0.95
+      },
+      "confidence": 0.95,
+      "created_at": "2026-08-10T22:34:33.620748Z"
+    },
+    {
+      "evidence_id": "4a21bbdb-e5d5-487b-91a7-50ceabf2e161",
+      "kind": "recommended_action",
+      "summary": "Remediate schema_change",
+      "source": "pipeline_sre",
+      "data": {
+        "action_id": "fd2d2912-7a32-4edc-bfa9-2846beed28ef",
+        "tool_name": "create_incident_report",
+        "args": {
+          "incident_id": "schema",
+          "root_cause": "schema_change",
+          "summary": "Update accepted values / contract",
+          "remediation": "Update dbt accepted_values and data contract"
+        },
+        "risk": "SAFE_AUTOMATION",
+        "rationale": "Remediate schema_change",
+        "status": "proposed",
+        "approval_required": false,
+        "result": null
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.620818Z"
+    },
+    {
+      "evidence_id": "fc358ee8-7041-4788-b487-cad5a1e33372",
+      "kind": "tool_result",
+      "summary": "create_incident_report returned structured data",
+      "source": "create_incident_report",
+      "data": {
+        "args": {
+          "incident_id": "INC-0000",
+          "root_cause": "schema_change",
+          "summary": "Investigate insurance_daily_pipeline",
+          "remediation": "Update dbt accepted_values and data contract",
+          "evidence": [
+            "log_match:unexpected value|accepted_values|schema|REOPENED",
+            "failed_test:accepted_values_stg_claims_claim_status",
+            "log_match:unexpected value|accepted_values|schema|REOPENED"
+          ]
+        },
+        "output": {
+          "report_id": "RPT-INC-0000",
+          "path": "data/synthetic/incident_reports/RPT-INC-0000.md",
+          "status": "written"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.621735Z"
+    },
+    {
+      "evidence_id": "441f1be8-c490-4e28-9b43-b616812c41f5",
+      "kind": "tool_result",
+      "summary": "create_incident_report returned structured data",
+      "source": "create_incident_report",
+      "data": {
+        "args": {
+          "incident_id": "INC-0000",
+          "root_cause": "schema_change",
+          "summary": "Investigate insurance_daily_pipeline",
+          "remediation": "create_incident_report:{'incident_id': 'schema', 'root_cause': 'schema_change', 'summary': 'Update accepted values / contract', 'remediation': 'Update dbt accepted_values and data contract'}",
+          "evidence": [
+            "log_match:unexpected value|accepted_values|schema|REOPENED",
+            "failed_test:accepted_values_stg_claims_claim_status",
+            "log_match:unexpected value|accepted_values|schema|REOPENED"
+          ]
+        },
+        "output": {
+          "report_id": "RPT-INC-0000",
+          "path": "data/synthetic/incident_reports/RPT-INC-0000.md",
+          "status": "written"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.622308Z"
+    },
+    {
+      "evidence_id": "fd4150c3-b5a4-42d8-b3d9-a662c4ef26fe",
+      "kind": "tool_result",
+      "summary": "validate_pipeline returned structured data",
+      "source": "validate_pipeline",
+      "data": {
+        "args": {
+          "dag_id": "insurance_daily_pipeline"
+        },
+        "output": {
+          "healthy": false,
+          "failed_tasks": [
+            "extract_claims",
+            "load_raw_claims",
+            "dbt_run_staging",
+            "dbt_run_core",
+            "dbt_test_core",
+            "feature_build",
+            "score_claims_model"
+          ],
+          "failed_tests": [
+            "accepted_values_stg_claims_claim_status",
+            "not_null_fct_claims_incurred_amount",
+            "unique_fct_claims_claim_id"
+          ],
+          "message": "issues remain"
+        }
+      },
+      "confidence": 1.0,
+      "created_at": "2026-08-10T22:34:33.622579Z"
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "b4e5379f-d911-4357-80f1-f4a8ab54c489",
+      "statement": "upstream_failure",
+      "confidence": 0.92,
+      "supporting_evidence": [
+        "log_match:Connection refused|SourceExtractError|SFTP"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "991e2a00-1ae7-4814-8413-5858a111757d",
+      "statement": "schema_change",
+      "confidence": 0.9,
+      "supporting_evidence": [
+        "log_match:unexpected value|accepted_values|schema|REOPENED"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "71d6ee24-a813-401e-968f-59c7c5f51b8b",
+      "statement": "missing_partition",
+      "confidence": 0.9,
+      "supporting_evidence": [
+        "log_match:Partition not found|s3://.*dt="
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "75b12bd1-91bc-4566-8737-90231f9b990f",
+      "statement": "data_freshness_failure",
+      "confidence": 0.88,
+      "supporting_evidence": [
+        "log_match:freshness|SLA"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "fe8de032-4c69-4d00-8bae-14d07509f676",
+      "statement": "warehouse_overload",
+      "confidence": 0.87,
+      "supporting_evidence": [
+        "log_match:queued_overload|overload"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "c0351e59-f56d-4659-87df-44fbe9761ba8",
+      "statement": "downstream_dependency_failure",
+      "confidence": 0.85,
+      "supporting_evidence": [
+        "log_match:Feature table missing|upstream .* failed"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "045f6263-e30d-4705-a579-0b8f59bc93c3",
+      "statement": "schema_change",
+      "confidence": 0.86,
+      "supporting_evidence": [
+        "failed_test:accepted_values_stg_claims_claim_status"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "d19af78e-7b83-435e-a3c9-2dd2e05fb874",
+      "statement": "null_spike",
+      "confidence": 0.86,
+      "supporting_evidence": [
+        "failed_test:not_null_fct_claims_incurred_amount"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "829003f0-403b-4adb-a493-c521520cc112",
+      "statement": "duplicate_records",
+      "confidence": 0.86,
+      "supporting_evidence": [
+        "failed_test:unique_fct_claims_claim_id"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "fcf9d347-b559-4ca2-a64f-bdf02f5a5031",
+      "statement": "upstream_failure",
+      "confidence": 0.92,
+      "supporting_evidence": [
+        "log_match:Connection refused|SourceExtractError|SFTP"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "885a6327-4fc5-4121-ba83-27848f93ce96",
+      "statement": "schema_change",
+      "confidence": 0.9,
+      "supporting_evidence": [
+        "log_match:unexpected value|accepted_values|schema|REOPENED"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "b344f6c1-6d79-4467-9dad-a6e421554c11",
+      "statement": "missing_partition",
+      "confidence": 0.9,
+      "supporting_evidence": [
+        "log_match:Partition not found|s3://.*dt="
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "47554594-aad2-45a6-a986-4ad9a57052d1",
+      "statement": "data_freshness_failure",
+      "confidence": 0.88,
+      "supporting_evidence": [
+        "log_match:freshness|SLA"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "d08bb03e-001a-4aa0-a3bf-aad74d0092ba",
+      "statement": "snowflake_query_timeout",
+      "confidence": 0.9,
+      "supporting_evidence": [
+        "log_match:timeout|000630|57014"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "99b6a850-210c-4b33-a507-fc490d91e29c",
+      "statement": "warehouse_overload",
+      "confidence": 0.87,
+      "supporting_evidence": [
+        "log_match:queued_overload|overload"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "46d5ff61-7422-4f68-b3ce-624989bb6f6e",
+      "statement": "downstream_dependency_failure",
+      "confidence": 0.85,
+      "supporting_evidence": [
+        "log_match:Feature table missing|upstream .* failed"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    },
+    {
+      "hypothesis_id": "55235c90-7d76-4cc5-bef7-9133b90d41de",
+      "statement": "null_spike",
+      "confidence": 0.95,
+      "supporting_evidence": [
+        "z_score=25.29075648087216"
+      ],
+      "contradicting_evidence": [],
+      "status": "open",
+      "tests_run": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "cb26ff54-ad87-48dc-8dbc-e21cbaace6e7",
+      "title": "schema_change",
+      "severity": "HIGH",
+      "kind": "observed_fact",
+      "explanation": "Deterministic RCA selected schema_change",
+      "evidence_ids": [
+        "log_match:unexpected value|accepted_values|schema|REOPENED",
+        "failed_test:accepted_values_stg_claims_claim_status",
+        "log_match:unexpected value|accepted_values|schema|REOPENED"
+      ],
+      "file": null,
+      "line": null,
+      "suggested_fix": "{'incident_id': 'schema', 'root_cause': 'schema_change', 'summary': 'Update accepted values / contract', 'remediation': 'Update dbt accepted_values and data contract'}"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "fd2d2912-7a32-4edc-bfa9-2846beed28ef",
+      "tool_name": "create_incident_report",
+      "args": {
+        "incident_id": "schema",
+        "root_cause": "schema_change",
+        "summary": "Update accepted values / contract",
+        "remediation": "Update dbt accepted_values and data contract"
+      },
+      "risk": "SAFE_AUTOMATION",
+      "rationale": "Remediate schema_change",
+      "status": "proposed",
+      "approval_required": false,
+      "result": null
+    }
+  ],
+  "approvals": [],
+  "final_result": {
+    "success": true,
+    "root_cause": "schema_change",
+    "confidence": 0.9600000000000001,
+    "evidence": [
+      "log_match:unexpected value|accepted_values|schema|REOPENED",
+      "failed_test:accepted_values_stg_claims_claim_status",
+      "log_match:unexpected value|accepted_values|schema|REOPENED"
+    ],
+    "remediation_success": true,
+    "awaiting_approval": false
+  },
+  "cost_usd": 0.0,
+  "token_usage": {},
+  "errors": []
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "model_id": "ml.claims_severity_v3",
+    "name": "claims_severity",
+    "version": "3.2.1",
+    "stage": "Production",
+    "framework": "xgboost",
+    "features": [
+      "avg_incurred_12m",
+      "days_to_report",
+      "policy_risk_score"
+    ],
+    "training_table": "ANALYTICS.ML.training_claims_model",
+    "target": "severity_bucket",
+    "metrics": {
+      "auc": 0.81,
+      "mae": 1200.0,
+      "calibration_ece": 0.04,
+      "auc_7d_ago": 0.84
+    },
+    "deployed_at": "2026-07-27T22:25:15.038804Z",
+    "endpoint": "local://claims-severity",
+    "mode": "LOCAL_SIMULATION"
+  }
+]

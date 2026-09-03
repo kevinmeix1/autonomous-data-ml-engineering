@@ -1,0 +1,1298 @@
+[
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T22:25:15.038804Z",
+    "credits": 10.121908786961356,
+    "queued_overload_time": 900.0,
+    "avg_running": 4.773912342551576,
+    "avg_queued": 12.0,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T22:25:15.038804Z",
+    "credits": 3.8496278594154654,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.918476662207605,
+    "avg_queued": 0.9622569552261742,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T22:25:15.038804Z",
+    "credits": 8.1844713835758,
+    "queued_overload_time": 120.0,
+    "avg_running": 7.797235927617773,
+    "avg_queued": 0.27071729163538416,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T21:25:15.038804Z",
+    "credits": 5.906553398822589,
+    "queued_overload_time": 900.0,
+    "avg_running": 3.0950505722188604,
+    "avg_queued": 12.0,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T21:25:15.038804Z",
+    "credits": 1.2769349140318376,
+    "queued_overload_time": 0.0,
+    "avg_running": 5.863528171605133,
+    "avg_queued": 2.5130278499026257,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T21:25:15.038804Z",
+    "credits": 4.551439030313179,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.508070924448705,
+    "avg_queued": 0.7003565082068337,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T20:25:15.038804Z",
+    "credits": 6.003108473606126,
+    "queued_overload_time": 900.0,
+    "avg_running": 6.491981454780851,
+    "avg_queued": 12.0,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T20:25:15.038804Z",
+    "credits": 2.81829641762206,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.086323084944841,
+    "avg_queued": 1.2623832801989012,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T20:25:15.038804Z",
+    "credits": 11.87491107640542,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.7871981414147475,
+    "avg_queued": 0.1464830861476334,
+    "size": "M"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T19:25:15.038804Z",
+    "credits": 10.41459310039638,
+    "queued_overload_time": 900.0,
+    "avg_running": 6.9263862166244605,
+    "avg_queued": 12.0,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T19:25:15.038804Z",
+    "credits": 5.524940905936769,
+    "queued_overload_time": 30.0,
+    "avg_running": 5.94646164415697,
+    "avg_queued": 3.578549979820213,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T19:25:15.038804Z",
+    "credits": 2.6483980022842957,
+    "queued_overload_time": 400.0,
+    "avg_running": 3.9801871399490185,
+    "avg_queued": 3.6972418665078544,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T18:25:15.038804Z",
+    "credits": 8.86143522994031,
+    "queued_overload_time": 900.0,
+    "avg_running": 3.444857216027575,
+    "avg_queued": 12.0,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T18:25:15.038804Z",
+    "credits": 4.193931424467831,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.6233592427324783,
+    "avg_queued": 1.1825597973613693,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T18:25:15.038804Z",
+    "credits": 5.400334838155023,
+    "queued_overload_time": 400.0,
+    "avg_running": 3.551267048808752,
+    "avg_queued": 1.7885186386810288,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T17:25:15.038804Z",
+    "credits": 5.501815797071059,
+    "queued_overload_time": 900.0,
+    "avg_running": 7.840218233554233,
+    "avg_queued": 12.0,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T17:25:15.038804Z",
+    "credits": 5.171417662338003,
+    "queued_overload_time": 120.0,
+    "avg_running": 6.4087678044973595,
+    "avg_queued": 2.7176424312587595,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T17:25:15.038804Z",
+    "credits": 7.487088388189837,
+    "queued_overload_time": 30.0,
+    "avg_running": 0.2783917263883362,
+    "avg_queued": 0.26893345224843523,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T16:25:15.038804Z",
+    "credits": 11.418871786619077,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.840758630838284,
+    "avg_queued": 2.7162482276535798,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T16:25:15.038804Z",
+    "credits": 9.275471425683664,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.1015608626282143,
+    "avg_queued": 1.4677997946153294,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T16:25:15.038804Z",
+    "credits": 3.3705340105740764,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.20730672691314567,
+    "avg_queued": 0.7441921978903996,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T15:25:15.038804Z",
+    "credits": 1.8542514481427648,
+    "queued_overload_time": 0.0,
+    "avg_running": 5.632302489654607,
+    "avg_queued": 0.8582817016948789,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T15:25:15.038804Z",
+    "credits": 11.984231700366752,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.9810993752317669,
+    "avg_queued": 3.4113051615372907,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T15:25:15.038804Z",
+    "credits": 8.703753785183867,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.484105746861055,
+    "avg_queued": 3.8702449454522494,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T14:25:15.038804Z",
+    "credits": 8.659715598425263,
+    "queued_overload_time": 120.0,
+    "avg_running": 4.3373708898044985,
+    "avg_queued": 3.5653267294155557,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T14:25:15.038804Z",
+    "credits": 11.164231252316544,
+    "queued_overload_time": 400.0,
+    "avg_running": 1.3927280779896005,
+    "avg_queued": 1.4459687324987573,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T14:25:15.038804Z",
+    "credits": 2.8112742685433862,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.893889474294964,
+    "avg_queued": 1.976087749787689,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T13:25:15.038804Z",
+    "credits": 4.742478403264038,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.0381698377101634,
+    "avg_queued": 3.53698578733848,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T13:25:15.038804Z",
+    "credits": 11.99534300524545,
+    "queued_overload_time": 400.0,
+    "avg_running": 3.8293208793220312,
+    "avg_queued": 1.6431804826606675,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T13:25:15.038804Z",
+    "credits": 1.3481331984792488,
+    "queued_overload_time": 0.0,
+    "avg_running": 5.138708715091051,
+    "avg_queued": 1.7998979826519843,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T12:25:15.038804Z",
+    "credits": 10.034117873557088,
+    "queued_overload_time": 120.0,
+    "avg_running": 5.118351434933304,
+    "avg_queued": 0.7278525462085494,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T12:25:15.038804Z",
+    "credits": 10.973191115889204,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.651126451740331,
+    "avg_queued": 2.072408531696065,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T12:25:15.038804Z",
+    "credits": 4.210598638277389,
+    "queued_overload_time": 400.0,
+    "avg_running": 1.8037622777237337,
+    "avg_queued": 3.78993254723859,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T11:25:15.038804Z",
+    "credits": 3.381961053292989,
+    "queued_overload_time": 400.0,
+    "avg_running": 7.650813016345585,
+    "avg_queued": 1.097804132854053,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T11:25:15.038804Z",
+    "credits": 1.574426679161124,
+    "queued_overload_time": 400.0,
+    "avg_running": 1.3490872139816545,
+    "avg_queued": 3.7664279514743835,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T11:25:15.038804Z",
+    "credits": 7.6815106554871555,
+    "queued_overload_time": 120.0,
+    "avg_running": 2.7009566928464173,
+    "avg_queued": 3.695718901265205,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T10:25:15.038804Z",
+    "credits": 0.8262951108370926,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.588374831763132,
+    "avg_queued": 3.084089475177861,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T10:25:15.038804Z",
+    "credits": 9.320028510537577,
+    "queued_overload_time": 30.0,
+    "avg_running": 4.94486741059966,
+    "avg_queued": 0.12114359432572286,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T10:25:15.038804Z",
+    "credits": 3.97408229897816,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.437505233725864,
+    "avg_queued": 2.7399633647827066,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T09:25:15.038804Z",
+    "credits": 8.419056074239311,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.516843999363288,
+    "avg_queued": 1.9370045204294368,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T09:25:15.038804Z",
+    "credits": 2.1521899483702978,
+    "queued_overload_time": 400.0,
+    "avg_running": 2.5545311411738245,
+    "avg_queued": 3.952093477868359,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T09:25:15.038804Z",
+    "credits": 2.003810742852444,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.119841072657777,
+    "avg_queued": 0.4247357344363891,
+    "size": "M"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T08:25:15.038804Z",
+    "credits": 3.5759242562230975,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.127021080065468,
+    "avg_queued": 0.2024211672011611,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T08:25:15.038804Z",
+    "credits": 5.30854954835108,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.507822771515596,
+    "avg_queued": 3.735006140997619,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T08:25:15.038804Z",
+    "credits": 2.33243773676495,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.734520941898805,
+    "avg_queued": 3.516302654401674,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T07:25:15.038804Z",
+    "credits": 11.370177246796228,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.657845137517847,
+    "avg_queued": 0.9629145626766804,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T07:25:15.038804Z",
+    "credits": 3.7355978912955763,
+    "queued_overload_time": 120.0,
+    "avg_running": 7.058715810945609,
+    "avg_queued": 2.6170401475584684,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T07:25:15.038804Z",
+    "credits": 0.5940401683932706,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.447422154780324,
+    "avg_queued": 3.5298229236743714,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T06:25:15.038804Z",
+    "credits": 4.708279553951974,
+    "queued_overload_time": 30.0,
+    "avg_running": 0.4092614990640664,
+    "avg_queued": 2.2472674606637746,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T06:25:15.038804Z",
+    "credits": 1.3456151220426809,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.602835045123345,
+    "avg_queued": 2.199428358069678,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T06:25:15.038804Z",
+    "credits": 1.611837089284454,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.359177827047566,
+    "avg_queued": 1.3563411998102612,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T05:25:15.038804Z",
+    "credits": 2.7891656378531744,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.211096674208516,
+    "avg_queued": 0.16101962462971642,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T05:25:15.038804Z",
+    "credits": 4.329968111556823,
+    "queued_overload_time": 30.0,
+    "avg_running": 4.154661682664666,
+    "avg_queued": 0.5957626583057793,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T05:25:15.038804Z",
+    "credits": 7.550283392243797,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.1436367029318646,
+    "avg_queued": 2.4660019498860644,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T04:25:15.038804Z",
+    "credits": 6.33412234131491,
+    "queued_overload_time": 120.0,
+    "avg_running": 4.258718639007011,
+    "avg_queued": 2.8349592257417515,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T04:25:15.038804Z",
+    "credits": 0.6913249882766216,
+    "queued_overload_time": 0.0,
+    "avg_running": 5.390451139784132,
+    "avg_queued": 3.9195921247166474,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T04:25:15.038804Z",
+    "credits": 8.841228444346337,
+    "queued_overload_time": 400.0,
+    "avg_running": 5.034083844819495,
+    "avg_queued": 2.387638463812775,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T03:25:15.038804Z",
+    "credits": 9.503395901461346,
+    "queued_overload_time": 120.0,
+    "avg_running": 4.621075166913463,
+    "avg_queued": 2.885600449185227,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T03:25:15.038804Z",
+    "credits": 7.733790273171682,
+    "queued_overload_time": 120.0,
+    "avg_running": 6.1968490386704875,
+    "avg_queued": 1.520761345260611,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T03:25:15.038804Z",
+    "credits": 11.404359464019466,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.5262746226154187,
+    "avg_queued": 1.7641542647389317,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T02:25:15.038804Z",
+    "credits": 8.440753000563042,
+    "queued_overload_time": 30.0,
+    "avg_running": 4.014556036887901,
+    "avg_queued": 2.4459122395670696,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T02:25:15.038804Z",
+    "credits": 8.962128619589835,
+    "queued_overload_time": 0.0,
+    "avg_running": 5.6462018572141215,
+    "avg_queued": 2.074732846240452,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T02:25:15.038804Z",
+    "credits": 6.001266308449113,
+    "queued_overload_time": 30.0,
+    "avg_running": 2.510020789902537,
+    "avg_queued": 0.692729695429311,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T01:25:15.038804Z",
+    "credits": 8.272488630398232,
+    "queued_overload_time": 400.0,
+    "avg_running": 5.445967116553133,
+    "avg_queued": 3.214610120454827,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T01:25:15.038804Z",
+    "credits": 2.711037945072204,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.2320511673740535,
+    "avg_queued": 1.1939966447611758,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T01:25:15.038804Z",
+    "credits": 8.606360773620715,
+    "queued_overload_time": 400.0,
+    "avg_running": 5.639906077921574,
+    "avg_queued": 1.2681629800737921,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-10T00:25:15.038804Z",
+    "credits": 11.246581976467084,
+    "queued_overload_time": 400.0,
+    "avg_running": 2.1876602940433845,
+    "avg_queued": 0.48749642293086026,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-10T00:25:15.038804Z",
+    "credits": 5.037123239869928,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.636870907131691,
+    "avg_queued": 3.2184633358262813,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-10T00:25:15.038804Z",
+    "credits": 11.486107753311282,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.770908112764932,
+    "avg_queued": 1.7695044474593415,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T23:25:15.038804Z",
+    "credits": 2.960848292885587,
+    "queued_overload_time": 120.0,
+    "avg_running": 2.1690617759838062,
+    "avg_queued": 2.248072078709939,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T23:25:15.038804Z",
+    "credits": 7.580285895766662,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.9142565275703687,
+    "avg_queued": 0.2030617198298561,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T23:25:15.038804Z",
+    "credits": 1.103647728653822,
+    "queued_overload_time": 30.0,
+    "avg_running": 2.6423489878987105,
+    "avg_queued": 1.8896156281395227,
+    "size": "M"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T22:25:15.038804Z",
+    "credits": 6.829054506465591,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.2552596123750677,
+    "avg_queued": 3.740128394384606,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T22:25:15.038804Z",
+    "credits": 2.793743708677419,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.5693416169533334,
+    "avg_queued": 2.5835916715610794,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T22:25:15.038804Z",
+    "credits": 3.1705322910416953,
+    "queued_overload_time": 400.0,
+    "avg_running": 5.784941425939387,
+    "avg_queued": 3.746677519002504,
+    "size": "M"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T21:25:15.038804Z",
+    "credits": 10.132456224572435,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.97737442470808,
+    "avg_queued": 1.5879782971131986,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T21:25:15.038804Z",
+    "credits": 9.113536816570988,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.013945343343387,
+    "avg_queued": 0.03706867392039914,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T21:25:15.038804Z",
+    "credits": 4.35298430750116,
+    "queued_overload_time": 30.0,
+    "avg_running": 7.912795760709787,
+    "avg_queued": 2.1732019342278996,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T20:25:15.038804Z",
+    "credits": 2.043299379104279,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.7441661520503207,
+    "avg_queued": 0.7712455930952391,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T20:25:15.038804Z",
+    "credits": 8.907871188800904,
+    "queued_overload_time": 400.0,
+    "avg_running": 2.058119041836153,
+    "avg_queued": 0.7447962765122709,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T20:25:15.038804Z",
+    "credits": 7.029484057840802,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.4039593107077177,
+    "avg_queued": 3.424586017093831,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T19:25:15.038804Z",
+    "credits": 6.425727578037653,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.206665973022929,
+    "avg_queued": 0.3815404231781123,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T19:25:15.038804Z",
+    "credits": 11.261991950515966,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.086282216523551,
+    "avg_queued": 0.9420850112061356,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T19:25:15.038804Z",
+    "credits": 3.972377156453569,
+    "queued_overload_time": 400.0,
+    "avg_running": 4.583018780436261,
+    "avg_queued": 1.046212603261571,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T18:25:15.038804Z",
+    "credits": 1.2144298157061653,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.723159927535435,
+    "avg_queued": 0.6388673009102526,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T18:25:15.038804Z",
+    "credits": 7.845180239792908,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.9403512248173618,
+    "avg_queued": 0.8833969598748861,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T18:25:15.038804Z",
+    "credits": 5.732254736862708,
+    "queued_overload_time": 120.0,
+    "avg_running": 2.988998735895491,
+    "avg_queued": 2.807762907422617,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T17:25:15.038804Z",
+    "credits": 9.722942405470356,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.094876959768857,
+    "avg_queued": 2.721367679677592,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T17:25:15.038804Z",
+    "credits": 6.573990926841724,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.6248217771795215,
+    "avg_queued": 2.2566748890938992,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T17:25:15.038804Z",
+    "credits": 10.8832138427578,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.581613393822917,
+    "avg_queued": 0.5994095255296572,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T16:25:15.038804Z",
+    "credits": 5.581166355585755,
+    "queued_overload_time": 400.0,
+    "avg_running": 1.6432118843148924,
+    "avg_queued": 2.3325907137640702,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T16:25:15.038804Z",
+    "credits": 5.623050960153035,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.627458401438256,
+    "avg_queued": 2.052991372806566,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T16:25:15.038804Z",
+    "credits": 6.926167788485813,
+    "queued_overload_time": 400.0,
+    "avg_running": 6.45532282043514,
+    "avg_queued": 2.8931203193000092,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T15:25:15.038804Z",
+    "credits": 0.5346779232975203,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.626490120472283,
+    "avg_queued": 0.18115921091131515,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T15:25:15.038804Z",
+    "credits": 6.723380296918914,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.4766623910795715,
+    "avg_queued": 0.2760765846412552,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T15:25:15.038804Z",
+    "credits": 5.201969761921355,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.126621463389694,
+    "avg_queued": 3.913333139696404,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T14:25:15.038804Z",
+    "credits": 10.750336460013058,
+    "queued_overload_time": 30.0,
+    "avg_running": 6.956962282485668,
+    "avg_queued": 3.6270692460982903,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T14:25:15.038804Z",
+    "credits": 11.587660328377888,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.063918450685387,
+    "avg_queued": 3.441146324508485,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T14:25:15.038804Z",
+    "credits": 6.678472593577014,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.0187766985808686,
+    "avg_queued": 3.914897508105344,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T13:25:15.038804Z",
+    "credits": 11.752642850810098,
+    "queued_overload_time": 30.0,
+    "avg_running": 5.3879988622125365,
+    "avg_queued": 2.177781356100083,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T13:25:15.038804Z",
+    "credits": 3.346388442793419,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.2409709856301383,
+    "avg_queued": 0.7539218049469696,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T13:25:15.038804Z",
+    "credits": 8.092273386726282,
+    "queued_overload_time": 120.0,
+    "avg_running": 6.128427740111227,
+    "avg_queued": 3.535026487381498,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T12:25:15.038804Z",
+    "credits": 1.2738453832291965,
+    "queued_overload_time": 120.0,
+    "avg_running": 0.26861020603424635,
+    "avg_queued": 2.3911395869262106,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T12:25:15.038804Z",
+    "credits": 1.008722395643975,
+    "queued_overload_time": 30.0,
+    "avg_running": 1.8747142279004931,
+    "avg_queued": 0.8690768407102136,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T12:25:15.038804Z",
+    "credits": 11.925059574295055,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.526290054106535,
+    "avg_queued": 2.926069932464073,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T11:25:15.038804Z",
+    "credits": 9.384189443544424,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.895232278213765,
+    "avg_queued": 3.5050332886952287,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T11:25:15.038804Z",
+    "credits": 3.6642700858489623,
+    "queued_overload_time": 120.0,
+    "avg_running": 7.588162040213771,
+    "avg_queued": 3.518855563855532,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T11:25:15.038804Z",
+    "credits": 5.41280669638725,
+    "queued_overload_time": 30.0,
+    "avg_running": 0.3750727756196399,
+    "avg_queued": 1.377659319090438,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T10:25:15.038804Z",
+    "credits": 4.165446259137591,
+    "queued_overload_time": 30.0,
+    "avg_running": 3.2660734146367076,
+    "avg_queued": 1.1995539777416044,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T10:25:15.038804Z",
+    "credits": 5.9454664347405295,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.4058913503611823,
+    "avg_queued": 2.830307189951889,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T10:25:15.038804Z",
+    "credits": 6.967438420249455,
+    "queued_overload_time": 30.0,
+    "avg_running": 4.458294065594185,
+    "avg_queued": 0.5363710042363121,
+    "size": "M"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T09:25:15.038804Z",
+    "credits": 4.298024426677207,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.377808836089779,
+    "avg_queued": 3.3885335436784474,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T09:25:15.038804Z",
+    "credits": 10.038172279972871,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.1476927028398496,
+    "avg_queued": 2.694687682538314,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T09:25:15.038804Z",
+    "credits": 2.6638778802266865,
+    "queued_overload_time": 120.0,
+    "avg_running": 5.794441918817193,
+    "avg_queued": 2.235401905090109,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T08:25:15.038804Z",
+    "credits": 10.930877516635428,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.656158084213385,
+    "avg_queued": 0.06133482491397135,
+    "size": "M"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T08:25:15.038804Z",
+    "credits": 1.8491362935983466,
+    "queued_overload_time": 30.0,
+    "avg_running": 7.315530374204705,
+    "avg_queued": 2.782505142819927,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T08:25:15.038804Z",
+    "credits": 3.2523060280748592,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.204111056510162,
+    "avg_queued": 1.5226469774916902,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T07:25:15.038804Z",
+    "credits": 4.635913106779681,
+    "queued_overload_time": 30.0,
+    "avg_running": 3.7280325352316037,
+    "avg_queued": 3.211266487280084,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T07:25:15.038804Z",
+    "credits": 4.182682775071269,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.9656393714500675,
+    "avg_queued": 1.6557206823144983,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T07:25:15.038804Z",
+    "credits": 0.6865288615144954,
+    "queued_overload_time": 120.0,
+    "avg_running": 7.478066002370828,
+    "avg_queued": 2.316571704149602,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T06:25:15.038804Z",
+    "credits": 2.756205501358589,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.0387181979292333,
+    "avg_queued": 3.3334508611479405,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T06:25:15.038804Z",
+    "credits": 11.34984226804775,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.058614061079062,
+    "avg_queued": 3.2863677587694253,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T06:25:15.038804Z",
+    "credits": 8.926880725787717,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.3541256868814537,
+    "avg_queued": 2.881254123048375,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T05:25:15.038804Z",
+    "credits": 10.727692091722592,
+    "queued_overload_time": 400.0,
+    "avg_running": 7.657895151301148,
+    "avg_queued": 2.0957776616163177,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T05:25:15.038804Z",
+    "credits": 8.184478749021256,
+    "queued_overload_time": 0.0,
+    "avg_running": 3.2991377793247416,
+    "avg_queued": 3.370178867301394,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T05:25:15.038804Z",
+    "credits": 2.2368409343445808,
+    "queued_overload_time": 0.0,
+    "avg_running": 4.045863357544521,
+    "avg_queued": 1.4928027707472475,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T04:25:15.038804Z",
+    "credits": 0.6809153189960269,
+    "queued_overload_time": 120.0,
+    "avg_running": 4.413148487290055,
+    "avg_queued": 0.047403872511569745,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T04:25:15.038804Z",
+    "credits": 3.796918170132785,
+    "queued_overload_time": 120.0,
+    "avg_running": 6.505257767311279,
+    "avg_queued": 2.6961318084768413,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T04:25:15.038804Z",
+    "credits": 1.6076097378911973,
+    "queued_overload_time": 0.0,
+    "avg_running": 1.9277506585080655,
+    "avg_queued": 2.479123369647741,
+    "size": "L"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T03:25:15.038804Z",
+    "credits": 3.574234471781312,
+    "queued_overload_time": 30.0,
+    "avg_running": 0.632153950515483,
+    "avg_queued": 3.8371911765941205,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T03:25:15.038804Z",
+    "credits": 11.887679863856864,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.3997971227193844,
+    "avg_queued": 3.3122483148535222,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T03:25:15.038804Z",
+    "credits": 10.369520328743652,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.7480040434168753,
+    "avg_queued": 1.5170560889592637,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T02:25:15.038804Z",
+    "credits": 0.608676985522502,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.6614889800464141,
+    "avg_queued": 3.3813191781613123,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T02:25:15.038804Z",
+    "credits": 10.366543603682198,
+    "queued_overload_time": 0.0,
+    "avg_running": 7.158329697141598,
+    "avg_queued": 3.6766088617608474,
+    "size": "M"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T02:25:15.038804Z",
+    "credits": 10.483344241688464,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.8040023011621864,
+    "avg_queued": 0.18624788296697314,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T01:25:15.038804Z",
+    "credits": 3.7242896582341487,
+    "queued_overload_time": 120.0,
+    "avg_running": 4.508078912383868,
+    "avg_queued": 0.13160712061388757,
+    "size": "L"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T01:25:15.038804Z",
+    "credits": 2.8823183272102115,
+    "queued_overload_time": 0.0,
+    "avg_running": 6.0180357587749205,
+    "avg_queued": 2.850845599797439,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T01:25:15.038804Z",
+    "credits": 3.941684230179919,
+    "queued_overload_time": 120.0,
+    "avg_running": 1.9237775544342943,
+    "avg_queued": 3.338602240367008,
+    "size": "XL"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-09T00:25:15.038804Z",
+    "credits": 6.716467956564523,
+    "queued_overload_time": 30.0,
+    "avg_running": 6.044874116167138,
+    "avg_queued": 0.5598023769407892,
+    "size": "S"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-09T00:25:15.038804Z",
+    "credits": 11.704718265513959,
+    "queued_overload_time": 0.0,
+    "avg_running": 0.7814862988643796,
+    "avg_queued": 0.9285760175786808,
+    "size": "S"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-09T00:25:15.038804Z",
+    "credits": 9.343565013702587,
+    "queued_overload_time": 120.0,
+    "avg_running": 3.173624394471676,
+    "avg_queued": 3.0942196645252897,
+    "size": "S"
+  },
+  {
+    "warehouse": "TRANSFORM_WH",
+    "timestamp": "2026-08-08T23:25:15.038804Z",
+    "credits": 9.510803598275315,
+    "queued_overload_time": 30.0,
+    "avg_running": 3.924827648886346,
+    "avg_queued": 1.4232447908233916,
+    "size": "XL"
+  },
+  {
+    "warehouse": "ANALYTICS_WH",
+    "timestamp": "2026-08-08T23:25:15.038804Z",
+    "credits": 8.316490868013826,
+    "queued_overload_time": 400.0,
+    "avg_running": 3.040581708293802,
+    "avg_queued": 3.0886696165387595,
+    "size": "L"
+  },
+  {
+    "warehouse": "ML_WH",
+    "timestamp": "2026-08-08T23:25:15.038804Z",
+    "credits": 8.700748125801436,
+    "queued_overload_time": 0.0,
+    "avg_running": 2.1437762471569153,
+    "avg_queued": 1.5199999723338231,
+    "size": "M"
+  }
+]

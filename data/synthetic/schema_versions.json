@@ -1,0 +1,717 @@
+[
+  {
+    "version_id": "53436460-b1b0-4490-8f25-58c7088dcfd1",
+    "table_id": "RAW.POLICY.policies",
+    "version": 1,
+    "columns": [
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "customer_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "effective_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "expiration_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "premium_amount",
+        "data_type": "NUMBER",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "coverage_type",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "GL",
+          "PROPERTY",
+          "AUTO",
+          "WORKERS_COMP"
+        ]
+      },
+      {
+        "name": "status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "ACTIVE",
+          "CANCELLED",
+          "EXPIRED"
+        ]
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "5e6d0c46-cbda-4bed-a190-e223b8852693",
+    "table_id": "RAW.CLAIM.claims",
+    "version": 1,
+    "columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "be796255-3da0-4945-b244-50cd3cdb5a80",
+    "table_id": "RAW.CUSTOMER.customers",
+    "version": 1,
+    "columns": [
+      {
+        "name": "customer_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "legal_name",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "industry_naics",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "state",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "risk_tier",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "9467aaa4-cad5-4830-99e4-410dea2aa578",
+    "table_id": "RAW.EXPOSURE.exposures",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "payload",
+        "data_type": "VARIANT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loaded_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "5c8d2186-093e-46a9-b537-92b67320e404",
+    "table_id": "RAW.PREMIUM.premiums",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "payload",
+        "data_type": "VARIANT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loaded_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "ad0befa6-1ad4-4be7-9e09-25a44ab8f62d",
+    "table_id": "ANALYTICS.CORE.dim_policy",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "fdbb5ac8-162a-4a5b-b4e5-b51852e29226",
+    "table_id": "ANALYTICS.CORE.dim_customer",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "5edae28a-99a1-4fb3-a18a-4a34b78d607b",
+    "table_id": "ANALYTICS.CORE.fct_claims",
+    "version": 1,
+    "columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "3e9e77b4-42a5-4306-a154-50419b6e37f3",
+    "table_id": "ANALYTICS.CORE.fct_premiums",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "aa1edafa-ecd5-463b-b9cd-abe31c856a2c",
+    "table_id": "ANALYTICS.ML.feat_claim_severity",
+    "version": 1,
+    "columns": [
+      {
+        "name": "entity_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "as_of_ts",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "feature_value",
+        "data_type": "FLOAT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "d9b723aa-c67d-4598-b1f0-e921ff0aea5e",
+    "table_id": "ANALYTICS.ML.feat_policy_risk",
+    "version": 1,
+    "columns": [
+      {
+        "name": "entity_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "as_of_ts",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "feature_value",
+        "data_type": "FLOAT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "6058f3c0-f255-427a-9d92-13debad07c23",
+    "table_id": "ANALYTICS.ML.training_claims_model",
+    "version": 1,
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-07-11T22:25:15.038804Z",
+    "change_summary": "initial schema",
+    "changed_by": "schema-registry"
+  },
+  {
+    "version_id": "5b4e96b9-8ed0-4be0-ba2a-88d87fddff59",
+    "table_id": "RAW.CLAIM.claims",
+    "version": 2,
+    "columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED",
+          "REOPENED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status_v2",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "changed_at": "2026-08-10T16:25:15.038804Z",
+    "change_summary": "claim_status enum extended; claim_status_v2 added",
+    "changed_by": "source-system"
+  }
+]

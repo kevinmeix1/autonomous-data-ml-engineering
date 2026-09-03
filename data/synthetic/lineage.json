@@ -1,0 +1,110 @@
+[
+  {
+    "edge_id": "7f0f6d06-0485-4c42-8184-9fb646136735",
+    "source_id": "RAW.CLAIM.claims",
+    "target_id": "model.analytics.stg_claims",
+    "source_type": "source",
+    "target_type": "dbt_model",
+    "transformation": "select/rename",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "446f5e27-8449-461a-9aae-1dbfc915a237",
+    "source_id": "RAW.POLICY.policies",
+    "target_id": "model.analytics.stg_policies",
+    "source_type": "source",
+    "target_type": "dbt_model",
+    "transformation": "select/rename",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "36dcc7c0-5010-42d3-a1a0-83682b3c7ca2",
+    "source_id": "model.analytics.stg_policies",
+    "target_id": "model.analytics.dim_policy",
+    "source_type": "dbt_model",
+    "target_type": "dbt_model",
+    "transformation": "dedupe",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "b5e44b3a-f750-463e-887f-f65a2a32b874",
+    "source_id": "model.analytics.stg_claims",
+    "target_id": "model.analytics.fct_claims",
+    "source_type": "dbt_model",
+    "target_type": "dbt_model",
+    "transformation": "incremental join",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "1a24a892-bf7a-45e7-a4a3-153ea7936336",
+    "source_id": "model.analytics.dim_policy",
+    "target_id": "model.analytics.fct_claims",
+    "source_type": "dbt_model",
+    "target_type": "dbt_model",
+    "transformation": "join",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "90121b70-5743-470f-a7bd-932296946dbe",
+    "source_id": "model.analytics.fct_claims",
+    "target_id": "model.analytics.feat_claim_severity",
+    "source_type": "dbt_model",
+    "target_type": "feature",
+    "transformation": "aggregations",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "599123a7-fd0f-46b4-8094-a5ad35843f3a",
+    "source_id": "model.analytics.dim_policy",
+    "target_id": "model.analytics.feat_policy_risk",
+    "source_type": "dbt_model",
+    "target_type": "feature",
+    "transformation": "risk scoring",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "08b9b528-1114-47a0-854e-c05890b70f53",
+    "source_id": "model.analytics.fct_claims",
+    "target_id": "model.analytics.feat_policy_risk",
+    "source_type": "dbt_model",
+    "target_type": "feature",
+    "transformation": "claim history",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "eebaecb3-09bb-4c02-ba7a-5bafd550867b",
+    "source_id": "model.analytics.feat_claim_severity",
+    "target_id": "model.analytics.training_claims_model",
+    "source_type": "feature",
+    "target_type": "training_table",
+    "transformation": "join features",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "c9b9bed9-55f6-4bfe-bffa-db82baceb8d1",
+    "source_id": "model.analytics.feat_policy_risk",
+    "target_id": "model.analytics.training_claims_model",
+    "source_type": "feature",
+    "target_type": "training_table",
+    "transformation": "join features",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "78de938a-d450-47ac-a361-833371714e8f",
+    "source_id": "model.analytics.training_claims_model",
+    "target_id": "ml.claims_severity_v3",
+    "source_type": "training_table",
+    "target_type": "ml_model",
+    "transformation": "train",
+    "confidence": 1.0
+  },
+  {
+    "edge_id": "1b5c64b3-e354-40e1-a2a1-458b310e6f00",
+    "source_id": "ml.claims_severity_v3",
+    "target_id": "app.pricing_engine",
+    "source_type": "ml_model",
+    "target_type": "application",
+    "transformation": "score",
+    "confidence": 1.0
+  }
+]

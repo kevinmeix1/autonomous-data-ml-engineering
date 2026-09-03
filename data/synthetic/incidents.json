@@ -1,0 +1,722 @@
+[
+  {
+    "incident_id": "INC-0000",
+    "title": "Upstream extract_claims task failed",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:54:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "upstream_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Upstream extract_claims task failed",
+    "metadata": {
+      "failure_type": "upstream_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0001",
+    "title": "Schema change broke stg_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:43:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "schema_change",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Schema change broke stg_claims",
+    "metadata": {
+      "failure_type": "schema_change"
+    }
+  },
+  {
+    "incident_id": "INC-0002",
+    "title": "Missing partition for claims load date",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:48:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "missing_partition",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Missing partition for claims load date",
+    "metadata": {
+      "failure_type": "missing_partition"
+    }
+  },
+  {
+    "incident_id": "INC-0003",
+    "title": "Null spike in incurred_amount",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:52:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "null_spike",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Null spike in incurred_amount",
+    "metadata": {
+      "failure_type": "null_spike"
+    }
+  },
+  {
+    "incident_id": "INC-0004",
+    "title": "Duplicate claim_id in fct_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T22:14:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "duplicate_records",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Duplicate claim_id in fct_claims",
+    "metadata": {
+      "failure_type": "duplicate_records"
+    }
+  },
+  {
+    "incident_id": "INC-0005",
+    "title": "Claims table freshness SLA breached",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:57:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "data_freshness_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Claims table freshness SLA breached",
+    "metadata": {
+      "failure_type": "data_freshness_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0006",
+    "title": "dbt_run_core Snowflake timeout",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:22:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "dbt_run_core Snowflake timeout",
+    "metadata": {
+      "failure_type": "snowflake_query_timeout"
+    }
+  },
+  {
+    "incident_id": "INC-0007",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:43:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "warehouse_overload",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "TRANSFORM_WH overload delaying pipeline",
+    "metadata": {
+      "failure_type": "warehouse_overload"
+    }
+  },
+  {
+    "incident_id": "INC-0008",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:06:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "invalid_sql",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Invalid SQL in feat_policy_risk model",
+    "metadata": {
+      "failure_type": "invalid_sql"
+    }
+  },
+  {
+    "incident_id": "INC-0009",
+    "title": "score_claims_model failed due to upstream",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:49:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "score_claims_model failed due to upstream",
+    "metadata": {
+      "failure_type": "downstream_dependency_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0010",
+    "title": "Upstream extract_claims task failed",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:42:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "upstream_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Upstream extract_claims task failed",
+    "metadata": {
+      "failure_type": "upstream_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0011",
+    "title": "Schema change broke stg_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:53:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "schema_change",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Schema change broke stg_claims",
+    "metadata": {
+      "failure_type": "schema_change"
+    }
+  },
+  {
+    "incident_id": "INC-0012",
+    "title": "Missing partition for claims load date",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:28:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "missing_partition",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Missing partition for claims load date",
+    "metadata": {
+      "failure_type": "missing_partition"
+    }
+  },
+  {
+    "incident_id": "INC-0013",
+    "title": "Null spike in incurred_amount",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:25:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "null_spike",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Null spike in incurred_amount",
+    "metadata": {
+      "failure_type": "null_spike"
+    }
+  },
+  {
+    "incident_id": "INC-0014",
+    "title": "Duplicate claim_id in fct_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:21:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "duplicate_records",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Duplicate claim_id in fct_claims",
+    "metadata": {
+      "failure_type": "duplicate_records"
+    }
+  },
+  {
+    "incident_id": "INC-0015",
+    "title": "Claims table freshness SLA breached",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T19:53:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "data_freshness_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Claims table freshness SLA breached",
+    "metadata": {
+      "failure_type": "data_freshness_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0016",
+    "title": "dbt_run_core Snowflake timeout",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T19:53:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "dbt_run_core Snowflake timeout",
+    "metadata": {
+      "failure_type": "snowflake_query_timeout"
+    }
+  },
+  {
+    "incident_id": "INC-0017",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:04:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "warehouse_overload",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "TRANSFORM_WH overload delaying pipeline",
+    "metadata": {
+      "failure_type": "warehouse_overload"
+    }
+  },
+  {
+    "incident_id": "INC-0018",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:31:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "invalid_sql",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Invalid SQL in feat_policy_risk model",
+    "metadata": {
+      "failure_type": "invalid_sql"
+    }
+  },
+  {
+    "incident_id": "INC-0019",
+    "title": "score_claims_model failed due to upstream",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:49:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "score_claims_model failed due to upstream",
+    "metadata": {
+      "failure_type": "downstream_dependency_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0020",
+    "title": "Upstream extract_claims task failed",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T22:09:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "upstream_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Upstream extract_claims task failed",
+    "metadata": {
+      "failure_type": "upstream_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0021",
+    "title": "Schema change broke stg_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:53:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "schema_change",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Schema change broke stg_claims",
+    "metadata": {
+      "failure_type": "schema_change"
+    }
+  },
+  {
+    "incident_id": "INC-0022",
+    "title": "Missing partition for claims load date",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:45:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "missing_partition",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Missing partition for claims load date",
+    "metadata": {
+      "failure_type": "missing_partition"
+    }
+  },
+  {
+    "incident_id": "INC-0023",
+    "title": "Null spike in incurred_amount",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T19:54:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "null_spike",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Null spike in incurred_amount",
+    "metadata": {
+      "failure_type": "null_spike"
+    }
+  },
+  {
+    "incident_id": "INC-0024",
+    "title": "Duplicate claim_id in fct_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:52:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "duplicate_records",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Duplicate claim_id in fct_claims",
+    "metadata": {
+      "failure_type": "duplicate_records"
+    }
+  },
+  {
+    "incident_id": "INC-0025",
+    "title": "Claims table freshness SLA breached",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T19:43:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "data_freshness_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Claims table freshness SLA breached",
+    "metadata": {
+      "failure_type": "data_freshness_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0026",
+    "title": "dbt_run_core Snowflake timeout",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T19:42:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "dbt_run_core Snowflake timeout",
+    "metadata": {
+      "failure_type": "snowflake_query_timeout"
+    }
+  },
+  {
+    "incident_id": "INC-0027",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:52:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "warehouse_overload",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "TRANSFORM_WH overload delaying pipeline",
+    "metadata": {
+      "failure_type": "warehouse_overload"
+    }
+  },
+  {
+    "incident_id": "INC-0028",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:37:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "invalid_sql",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Invalid SQL in feat_policy_risk model",
+    "metadata": {
+      "failure_type": "invalid_sql"
+    }
+  },
+  {
+    "incident_id": "INC-0029",
+    "title": "score_claims_model failed due to upstream",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T22:12:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "score_claims_model failed due to upstream",
+    "metadata": {
+      "failure_type": "downstream_dependency_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0030",
+    "title": "Upstream extract_claims task failed",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T21:01:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "upstream_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Upstream extract_claims task failed",
+    "metadata": {
+      "failure_type": "upstream_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0031",
+    "title": "Schema change broke stg_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T20:30:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "schema_change",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Schema change broke stg_claims",
+    "metadata": {
+      "failure_type": "schema_change"
+    }
+  },
+  {
+    "incident_id": "INC-0032",
+    "title": "Missing partition for claims load date",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:36:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "missing_partition",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Missing partition for claims load date",
+    "metadata": {
+      "failure_type": "missing_partition"
+    }
+  },
+  {
+    "incident_id": "INC-0033",
+    "title": "Null spike in incurred_amount",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:54:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "null_spike",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Null spike in incurred_amount",
+    "metadata": {
+      "failure_type": "null_spike"
+    }
+  },
+  {
+    "incident_id": "INC-0034",
+    "title": "Duplicate claim_id in fct_claims",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T19:52:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "duplicate_records",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Duplicate claim_id in fct_claims",
+    "metadata": {
+      "failure_type": "duplicate_records"
+    }
+  },
+  {
+    "incident_id": "INC-0035",
+    "title": "Claims table freshness SLA breached",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:13:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "data_freshness_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Claims table freshness SLA breached",
+    "metadata": {
+      "failure_type": "data_freshness_failure"
+    }
+  },
+  {
+    "incident_id": "INC-0036",
+    "title": "dbt_run_core Snowflake timeout",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T19:49:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "snowflake_query_timeout",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "dbt_run_core Snowflake timeout",
+    "metadata": {
+      "failure_type": "snowflake_query_timeout"
+    }
+  },
+  {
+    "incident_id": "INC-0037",
+    "title": "TRANSFORM_WH overload delaying pipeline",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:02:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "warehouse_overload",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "TRANSFORM_WH overload delaying pipeline",
+    "metadata": {
+      "failure_type": "warehouse_overload"
+    }
+  },
+  {
+    "incident_id": "INC-0038",
+    "title": "Invalid SQL in feat_policy_risk model",
+    "severity": "HIGH",
+    "status": "open",
+    "source_system": "dbt",
+    "detected_at": "2026-08-10T21:32:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "invalid_sql",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "Invalid SQL in feat_policy_risk model",
+    "metadata": {
+      "failure_type": "invalid_sql"
+    }
+  },
+  {
+    "incident_id": "INC-0039",
+    "title": "score_claims_model failed due to upstream",
+    "severity": "MEDIUM",
+    "status": "open",
+    "source_system": "airflow",
+    "detected_at": "2026-08-10T20:38:15.038804Z",
+    "root_cause": null,
+    "ground_truth_root_cause": "downstream_dependency_failure",
+    "affected_assets": [
+      "insurance_daily_pipeline",
+      "model.analytics.fct_claims"
+    ],
+    "summary": "score_claims_model failed due to upstream",
+    "metadata": {
+      "failure_type": "downstream_dependency_failure"
+    }
+  }
+]

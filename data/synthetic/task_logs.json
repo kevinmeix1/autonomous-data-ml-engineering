@@ -1,0 +1,11 @@
+{
+  "insurance_daily_pipeline.extract_claims": "[ERROR] Connection refused to claims source SFTP\nTraceback: SourceExtractError\n",
+  "insurance_daily_pipeline.extract_policies": "[2026-08-10T22:25:15.038804+00:00] Task extract_policies completed successfully\n",
+  "insurance_daily_pipeline.load_raw_claims": "[ERROR] Partition not found: s3://claims-landing/dt=2026-08-09/\n",
+  "insurance_daily_pipeline.load_raw_policies": "[2026-08-10T22:25:15.038804+00:00] Task load_raw_policies completed successfully\n",
+  "insurance_daily_pipeline.dbt_run_staging": "[ERROR] Database Error in model stg_claims\ncolumn claim_status unexpected value REOPENED\n",
+  "insurance_daily_pipeline.dbt_run_core": "[WARN] warehouse TRANSFORM_WH queued_overload_time=900s\n[ERROR] query delayed then cancelled\n",
+  "insurance_daily_pipeline.dbt_test_core": "[ERROR] freshness check failed for RAW.CLAIM.claims SLA=2h actual=48h\n",
+  "insurance_daily_pipeline.feature_build": "[ERROR] upstream dbt_test_core failed\n",
+  "insurance_daily_pipeline.score_claims_model": "[ERROR] Feature table missing; cannot score\n"
+}

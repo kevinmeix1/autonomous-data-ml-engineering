@@ -1,0 +1,718 @@
+[
+  {
+    "table_id": "RAW.POLICY.policies",
+    "database": "RAW",
+    "schema_name": "POLICY",
+    "table_name": "policies",
+    "columns": [
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "customer_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "effective_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "expiration_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "premium_amount",
+        "data_type": "NUMBER",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "coverage_type",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "GL",
+          "PROPERTY",
+          "AUTO",
+          "WORKERS_COMP"
+        ]
+      },
+      {
+        "name": "status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "ACTIVE",
+          "CANCELLED",
+          "EXPIRED"
+        ]
+      }
+    ],
+    "row_count": 943912,
+    "bytes": 5526209239,
+    "last_altered": "2026-08-09T17:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "policy"
+    ]
+  },
+  {
+    "table_id": "RAW.CLAIM.claims",
+    "database": "RAW",
+    "schema_name": "CLAIM",
+    "table_name": "claims",
+    "columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED",
+          "REOPENED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status_v2",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 1508640,
+    "bytes": 11325578478,
+    "last_altered": "2026-08-08T05:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "claim"
+    ]
+  },
+  {
+    "table_id": "RAW.CUSTOMER.customers",
+    "database": "RAW",
+    "schema_name": "CUSTOMER",
+    "table_name": "customers",
+    "columns": [
+      {
+        "name": "customer_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "legal_name",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "industry_naics",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "state",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "risk_tier",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 682023,
+    "bytes": 8001455696,
+    "last_altered": "2026-08-10T13:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "customer"
+    ]
+  },
+  {
+    "table_id": "RAW.EXPOSURE.exposures",
+    "database": "RAW",
+    "schema_name": "EXPOSURE",
+    "table_name": "exposures",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "payload",
+        "data_type": "VARIANT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loaded_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 3011521,
+    "bytes": 9081429827,
+    "last_altered": "2026-08-07T22:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "exposure"
+    ]
+  },
+  {
+    "table_id": "RAW.PREMIUM.premiums",
+    "database": "RAW",
+    "schema_name": "PREMIUM",
+    "table_name": "premiums",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "payload",
+        "data_type": "VARIANT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loaded_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 3241253,
+    "bytes": 9456316717,
+    "last_altered": "2026-08-10T16:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "premium"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.CORE.dim_policy",
+    "database": "ANALYTICS",
+    "schema_name": "CORE",
+    "table_name": "dim_policy",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 1246094,
+    "bytes": 154906255,
+    "last_altered": "2026-08-09T14:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "core"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.CORE.dim_customer",
+    "database": "ANALYTICS",
+    "schema_name": "CORE",
+    "table_name": "dim_customer",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 3824294,
+    "bytes": 10043726649,
+    "last_altered": "2026-08-08T21:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "core"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.CORE.fct_claims",
+    "database": "ANALYTICS",
+    "schema_name": "CORE",
+    "table_name": "fct_claims",
+    "columns": [
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "loss_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "report_date",
+        "data_type": "DATE",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_status",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": [
+          "OPEN",
+          "CLOSED",
+          "LITIGATION",
+          "DENIED"
+        ]
+      },
+      {
+        "name": "incurred_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "paid_amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 3402362,
+    "bytes": 7316170509,
+    "last_altered": "2026-08-09T06:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "core"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.CORE.fct_premiums",
+    "database": "ANALYTICS",
+    "schema_name": "CORE",
+    "table_name": "fct_premiums",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 4835119,
+    "bytes": 12167911975,
+    "last_altered": "2026-08-10T16:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "core"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.ML.feat_claim_severity",
+    "database": "ANALYTICS",
+    "schema_name": "ML",
+    "table_name": "feat_claim_severity",
+    "columns": [
+      {
+        "name": "entity_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "as_of_ts",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "feature_value",
+        "data_type": "FLOAT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 1285951,
+    "bytes": 4503965328,
+    "last_altered": "2026-08-08T05:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "ml"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.ML.feat_policy_risk",
+    "database": "ANALYTICS",
+    "schema_name": "ML",
+    "table_name": "feat_policy_risk",
+    "columns": [
+      {
+        "name": "entity_id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "as_of_ts",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": false,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "feature_value",
+        "data_type": "FLOAT",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 2030226,
+    "bytes": 6849608113,
+    "last_altered": "2026-08-09T16:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "ml"
+    ]
+  },
+  {
+    "table_id": "ANALYTICS.ML.training_claims_model",
+    "database": "ANALYTICS",
+    "schema_name": "ML",
+    "table_name": "training_claims_model",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "VARCHAR",
+        "nullable": false,
+        "is_primary_key": true,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "policy_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "claim_id",
+        "data_type": "VARCHAR",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "amount",
+        "data_type": "NUMBER",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "event_date",
+        "data_type": "DATE",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      },
+      {
+        "name": "updated_at",
+        "data_type": "TIMESTAMP_NTZ",
+        "nullable": true,
+        "is_primary_key": false,
+        "description": null,
+        "enum_values": null
+      }
+    ],
+    "row_count": 1112362,
+    "bytes": 9907424348,
+    "last_altered": "2026-08-08T16:25:15.038804Z",
+    "owner": "data-platform",
+    "tags": [
+      "insurance",
+      "ml"
+    ]
+  }
+]
