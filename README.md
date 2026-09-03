@@ -31,6 +31,17 @@ infrastructure/    # Docker Compose
 tests/
 ```
 
+```mermaid
+flowchart LR
+    Signals[Logs, lineage, profiles, and synthetic incidents] --> Agents[Specialist diagnostic agents]
+    Agents --> Tools[Typed, allowlisted tools]
+    Tools --> Findings[Hypotheses and evidence]
+    Findings --> Policy[Safety classification and approval]
+    Policy --> Actions[Safe remediation or operator handoff]
+    Actions --> Eval[Ground-truth evaluation and telemetry]
+    Eval --> Agents
+```
+
 ## Agents
 
 | # | Agent | Folder |
